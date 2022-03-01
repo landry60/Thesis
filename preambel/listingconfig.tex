@@ -1,0 +1,68 @@
+% "define" Scala
+\lstdefinelanguage{scala}{
+  morekeywords={abstract,case,catch,class,def,%
+    do,else,extends,false,final,finally,%
+    for,if,implicit,import,match,mixin,%
+    new,null,object,override,package,%
+    private,protected,requires,return,sealed,%
+    super,this,throw,trait,true,try,%
+    type,val,var,while,with,yield},
+  otherkeywords={=>,<-,<\%,<:,>:,\#,@},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[n]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]',
+  morestring=[b]"""
+}
+
+%\lstset{
+%    float=hbp,
+%    basicstyle=\ttfamily\color{black}\small,
+%    identifierstyle=\color{colIdentifier},
+%    %keywordstyle=\color{colKeys},
+%    %stringstyle=\color{colString},
+%    %commentstyle=\color{colComments},
+%    keywordstyle=\color{blue},
+%    commentstyle=\color{dkgray},
+%    stringstyle=\color{dkgreen},
+%    columns=flexible,
+%    tabsize=2,
+%    frame=single,
+%    extendedchars=true,
+%    showspaces=false,
+%    showstringspaces=false,
+%    numbers=left,
+%    numberstyle=\tiny\color{gray},
+%    breaklines=true,
+%    backgroundcolor=\color{bluegray},
+%    breakautoindent=true
+%}
+\lstset{
+  basicstyle=\ttfamily\color{black}\footnotesize,
+  numbers=left,               % Ort der Zeilennummern
+  numberstyle=\tiny,          % Stil der Zeilennummern
+  %stepnumber=2,               % Abstand zwischen den Zeilennummern
+  numbersep=5pt,              % Abstand der Nummern zum Text
+  tabsize=2,                  % Groesse von Tabs
+  extendedchars=true,         %
+  breaklines=true,            % Zeilen werden Umgebrochen
+  numberstyle=\tiny\color{dkgray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{orange},
+  stringstyle=\color{dkgreen},
+  frame=tb,
+  %keywordstyle=[1]\textbf,    % Stil der Keywords
+  %keywordstyle=[2]\textbf,    %
+  %keywordstyle=[3]\textbf,    %
+  %keywordstyle=[4]\textbf,   \sqrt{\sqrt{}} %
+  %stringstyle=\color{white}\ttfamily, % Farbe der String
+  showspaces=false,           % Leerzeichen anzeigen ?
+  showtabs=false,             % Tabs anzeigen ?
+  xleftmargin=0pt,
+  framexleftmargin=2pt,
+  framexrightmargin=2pt,
+  framexbottommargin=0pt,
+  backgroundcolor=\color{lstBg},
+  showstringspaces=false      % Leerzeichen in Strings anzeigen ?
+}

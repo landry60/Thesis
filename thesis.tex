@@ -1,0 +1,115 @@
+\listfiles
+
+% Dokumentenkopf
+\input{preambel/docclass}
+
+% Meta
+\input{preambel/meta}
+
+% Packages
+\input{preambel/packages}
+
+% Erstellung eines Index und Abkürzungsverzeichnisses aktivieren ---------------
+\makeindex
+\makenomenclature
+
+% Kopf- und Fußzeilen, Seitenränder etc. ---------------------------------------
+\input{preambel/pagestyle}
+
+\input{preambel/colors}
+
+% eigene Definitionen für Silbentrennung
+\include{preambel/hyphenation}
+
+% listing config
+\include{preambel/listingconfig}
+
+% eigene LaTeX-Befehle
+\include{preambel/commands}
+
+\begin{document}
+% Seitennummerierung -----------------------------------------------------------
+%   Vor dem Hauptteil werden die Seiten in gr. römischen Ziffern nummeriert.
+% ------------------------------------------------------------------------------
+\pagenumbering{Roman}
+
+% auch subsubsection nummerieren
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% Deckblatt und Abstract ohne Seitenzahl
+\ofoot{}
+\include{content/cover}
+\include{content/licence}
+\include{content/abstract}
+\ofoot{\pagemark}
+
+%\phantomsection
+%   \addcontentsline{toc}{chapter}{Kapitelverzeichnis} % Kapitelverzeichnis auch als Lesezeichen
+%\shorttableofcontents{Kapitelverzeichnis}{0}
+
+\pagebreak
+
+\phantomsection
+   \addcontentsline{toc}{chapter}{Inhaltsverzeichnis} % Inhaltsverzeichnis auch als Lesezeichen
+\tableofcontents % Inhaltsverzeichnis
+
+% Abkürzungsverzeichnis --------------------------------------------------------
+\input{content/glossary}
+% für korrekte Überschrift in der Kopfzeile
+\clearpage\markboth{\nomname}{\nomname} 
+\label{sec:Glossar}
+\printnomenclature
+
+\listoffigures % Abbildungsverzeichnis
+%\listoftables % Tabellenverzeichnis
+\renewcommand{\lstlistlistingname}{Verzeichnis der Listings}
+\lstlistoflistings % Listings-Verzeichnis
+
+% arabische Seitenzahlen im Hauptteil ------------------------------------------
+\clearpage
+\pagenumbering{arabic}
+
+% Inhalt
+
+\input{content/Einleitung}
+\clearpage
+
+\input{content/Stand_der_Technik}
+\input{content/First_SoTA_Chapter}
+\input{content/Second_SoTA_Chapter}
+\clearpage
+
+\input{content/Fazit_und_Selbsteinschaetzung}
+\clearpage
+
+
+% Literaturverzeichnis ---------------------------------------------------------
+%   Das Literaturverzeichnis wird aus der BibTeX "bibliography.bib" erstellt.
+% ------------------------------------------------------------------------------
+\bibliography{bibliography} % Aufruf: bibtex Masterarbeit
+\bibliographystyle{natdin} %DIN-Stil des Literaturverzeichnisses
+%\bibliographystyle{myplainnat} % custom
+
+\include{content/jurat} % Eidesstattliche Erklärung
+
+% Anhang -----------------------------------------------------------------------
+%   Die Inhalte des Anhangs werden in der Datei "Anhang.tex" inkludiert.
+% ------------------------------------------------------------------------------
+\begin{appendix}
+    \clearpage
+    \pagenumbering{alph}
+    \chapter{Anhang}
+    \label{sec:Anhang}
+    % Rand der Aufzählungen in Tabellen anpassen
+    \setdefaultleftmargin{1em}{}{}{}{}{}
+    \input{content/appendix}
+\end{appendix}
+
+% Index ------------------------------------------------------------------------
+%   Zum Erstellen eines Index, die folgende Zeile auskommentieren.
+% ------------------------------------------------------------------------------
+%\printindex
+
+
+\end{document}
