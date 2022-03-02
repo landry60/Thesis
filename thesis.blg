@@ -1,9 +1,9 @@
 This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
-A level-1 auxiliary file: content/sperrvermerk.aux
 A level-1 auxiliary file: content/cover.aux
 A level-1 auxiliary file: content/licence.aux
+A level-1 auxiliary file: content/sperrvermerk.aux
 A level-1 auxiliary file: content/abstract.aux
 The style file: natdin.bst
 A level-1 auxiliary file: content/jurat.aux
@@ -13,44 +13,44 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliography.bib
-You've used 4 entries,
+You've used 1 entry,
             4728 wiz_defined-function locations,
-            916 strings with 6892 characters,
-and the built_in function-call counts, 2423 in all, are:
-= -- 249
-> -- 56
-< -- 52
-+ -- 65
-- -- 21
-* -- 154
-:= -- 425
-add.period$ -- 8
-call.type$ -- 4
-change.case$ -- 17
-chr.to.int$ -- 4
-cite$ -- 4
-duplicate$ -- 74
-empty$ -- 188
-format.name$ -- 31
-if$ -- 493
+            892 strings with 6499 characters,
+and the built_in function-call counts, 483 in all, are:
+= -- 42
+> -- 10
+< -- 7
++ -- 9
+- -- 3
+* -- 28
+:= -- 94
+add.period$ -- 1
+call.type$ -- 1
+change.case$ -- 4
+chr.to.int$ -- 1
+cite$ -- 1
+duplicate$ -- 17
+empty$ -- 41
+format.name$ -- 6
+if$ -- 93
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 17
-newline$ -- 41
-num.names$ -- 16
-pop$ -- 29
+missing$ -- 4
+newline$ -- 20
+num.names$ -- 4
+pop$ -- 7
 preamble$ -- 1
-purify$ -- 25
+purify$ -- 6
 quote$ -- 0
-skip$ -- 125
+skip$ -- 23
 stack$ -- 0
-substring$ -- 166
-swap$ -- 10
-text.length$ -- 8
+substring$ -- 18
+swap$ -- 2
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 44
+type$ -- 8
 warning$ -- 0
-while$ -- 20
+while$ -- 4
 width$ -- 0
-write$ -- 74
+write$ -- 25

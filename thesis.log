@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.11.10)  1 MAR 2022 15:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.11.10)  2 MAR 2022 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1485,7 +1485,7 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 
 ] (./thesis.toc
-Overfull \hbox (2.58478pt too wide) detected at line 5
+Overfull \hbox (2.58478pt too wide) detected at line 4
  [][][]\T1/lmss/bx/n/10.95 VIII[][]
  []
 
@@ -1497,7 +1497,7 @@ Overfull \hbox (2.58478pt too wide) detected at line 5
 
 
 
-] (./thesis.nls) [6
+] [6] (./thesis.nls) [7
 
 
 ] (./thesis.lof)
@@ -1518,7 +1518,7 @@ Class scrreprt Warning: \float@listhead detected!
 (scrreprt)              a package that still implements the
 (scrreprt)              deprecated \float@listhead interface on input line 68.
 
-[7
+[8
 
 ]
 chapter without number
@@ -1541,68 +1541,52 @@ Class scrreprt Warning: \float@addtolists detected!
 \tf@lol=\write9
 \openout9 = `thesis.lol'.
 
- [8
+ [9
 
 ] (./content/Einleitung.tex
 chapter 1.
-) [1
+[1
 
 
-] (./content/Stand_der_Technik.tex
+]) [2] (./content/Technische_Grundlagen.tex
 chapter 2.
-) (./content/First_SoTA_Chapter.tex
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 9.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 9.
-<./images/hochschule.jpg, id=144, 134.1813pt x 44.5665pt>
-File: ./images/hochschule.jpg Graphic file (type jpg)
-<use ./images/hochschule.jpg>
-Package pdftex.def Info: ./images/hochschule.jpg  used on input line 15.
-(pdftex.def)             Requested size: 239.00558pt x 79.38725pt.
- [2
-
-
-]
-<./images/standort_rotes_tor_anfahrt_klm_bau.png, id=159, 138.5175pt x 137.0721
-pt>
-File: ./images/standort_rotes_tor_anfahrt_klm_bau.png Graphic file (type png)
-<use ./images/standort_rotes_tor_anfahrt_klm_bau.png>
-Package pdftex.def Info: ./images/standort_rotes_tor_anfahrt_klm_bau.png  used 
-on input line 33.
-(pdftex.def)             Requested size: 179.25114pt x 177.38216pt.
-
-Underfull \hbox (badness 1097) in paragraph at lines 36--36
-[]\T1/lmr/bx/n/10 Abbildung 2.2: |\T1/lmr/m/n/10 Stand-ort Ro-tes Tor
- []
-
-) (./content/Second_SoTA_Chapter.tex [3 <./images/hochschule.jpg> <./images/sta
-ndort_rotes_tor_anfahrt_klm_bau.png>]
+) (./content/Technische_Ausgangssituation.tex)
+(./content/Can_Bus_Controller.tex) (./content/SPI_Schnitstelle.tex
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 17.
+(caption)                particular \caption on input line 15.
 See the caption package documentation for explanation.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ))
-Underfull \hbox (badness 10000) in paragraph at lines 16--81
+(./content/Embedded_Linux.tex
+Underfull \hbox (badness 10000) in paragraph at lines 14--1
 
  []
 
-[4] (./content/Fazit_und_Selbsteinschaetzung.tex
+[3
+
+
+]) (./content/Komponente_Embedded_Linux.tex)
+(./content/Petalinux_tool_flow.tex) [4] (./content/Versuch_Aufbau.tex
 chapter 3.
-[5
+) (./content/Allgemein_Projekt.tex) (./content/Hardware_Platform.tex)
+(./content/Konfigurieren_System.tex) [5
 
 
-]) [6] (./thesis.bbl (./thesis.brf)
+] (./content/Fazit_Ausblick.tex
+chapter 4.
+) (./thesis.bbl (./thesis.brf)
 \tf@brf=\write10
 \openout10 = `thesis.brf'.
 
+ [6
 
+
+]
 chapter without number
 ) [7
-
 
 ]
 \openout2 = `content/jurat.aux'.
@@ -1627,7 +1611,7 @@ Class scrreprt Warning: You are using `\begin{appendix}...\end{appendix}'.
 (scrreprt)              inconsistent.
 (scrreprt)              Because of this, you should remove `\end{appendix}'
 (scrreprt)              and replace `\begin{appendix}' by command
-(scrreprt)              `\appendix' on input line 99.
+(scrreprt)              `\appendix' on input line 107.
 
 chapter A.
 (./content/appendix.tex (./appendix/Datentraeger.tex
@@ -1825,13 +1809,19 @@ content/abstract.tex
 content/glossary.tex
   thesis.nls
 content/Einleitung.tex
-content/Stand_der_Technik.tex
-content/First_SoTA_Chapter.tex
-./images/hochschule.jpg
-./images/standort_rotes_tor_anfahrt_klm_bau.png
-content/Second_SoTA_Chapter.tex
+content/Technische_Grundlagen.tex
+content/Technische_Ausgangssituation.tex
+content/Can_Bus_Controller.tex
+content/SPI_Schnitstelle.tex
 lstlang1.sty    2020/03/24 1.8d listings language file
-content/Fazit_und_Selbsteinschaetzung.tex
+content/Embedded_Linux.tex
+content/Komponente_Embedded_Linux.tex
+content/Petalinux_tool_flow.tex
+content/Versuch_Aufbau.tex
+content/Allgemein_Projekt.tex
+content/Hardware_Platform.tex
+content/Konfigurieren_System.tex
+content/Fazit_Ausblick.tex
   thesis.bbl
 content/jurat.tex
 content/appendix.tex
@@ -1841,32 +1831,31 @@ appendix/Datentraeger.tex
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 710EDC0D7F60D3E585B8029188A36951;242.
+(rerunfilecheck)             Checksum: 67BED86CCDB31E09BFB5373A3175E34F;49.
  ) 
 Here is how much of TeX's memory you used:
- 28441 strings out of 479304
- 557717 string characters out of 5869778
- 1324927 words of memory out of 5000000
- 44845 multiletter control sequences out of 15000+600000
- 485379 words of font info for 80 fonts, out of 8000000 for 9000
+ 28431 strings out of 479304
+ 557615 string characters out of 5869778
+ 1326107 words of memory out of 5000000
+ 44819 multiletter control sequences out of 15000+600000
+ 477366 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,20n,120p,10626b,1382s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,19n,120p,10626b,1388s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</
 usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/
 public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/
 share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/
-uhvr8a.pfb>
-Output written on thesis.pdf (17 pages, 690248 bytes).
+mf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri1
+0.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on thesis.pdf (18 pages, 456038 bytes).
 PDF statistics:
- 352 PDF objects out of 1000 (max. 8388607)
- 289 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
- 289 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 361 PDF objects out of 1000 (max. 8388607)
+ 303 compressed objects within 4 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 351 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,28 +1,24 @@
 
 \begin{thenomenclature} 
 \nomgroup{A}
-  \item [{ACL}]\begingroup Agent Communication Language\nomeqref {0.0}\nompageref{IV}
-  \item [{AMS}]\begingroup Agent Management System\nomeqref {0.0}\nompageref{IV}
-  \item [{API}]\begingroup Application Programming Interface\nomeqref {0.0}\nompageref{IV}
-  \item [{Cougaar}]\begingroup Cognitive Agent Architecture\nomeqref {0.0}\nompageref{IV}
-  \item [{CPS}]\begingroup Cyber-Physical Systems\nomeqref {0.0}\nompageref{IV}
-  \item [{CRUD}]\begingroup Create, read, update and delete\nomeqref {0.0}\nompageref{IV}
-  \item [{CT}]\begingroup Container Table\nomeqref {0.0}\nompageref{IV}
-  \item [{DARPA}]\begingroup Defense Advanced Research Projects Agency\nomeqref {0.0}\nompageref{IV}
-  \item [{FIPA}]\begingroup Foundation for Intelligent Physical Agents\nomeqref {0.0}\nompageref{IV}
-  \item [{GADT}]\begingroup Global Agent Descriptor Table\nomeqref {0.0}\nompageref{IV}
-  \item [{GUI}]\begingroup Graphical User Interface\nomeqref {0.0}\nompageref{IV}
-  \item [{ID}]\begingroup Identifikationsnummer\nomeqref {0.0}\nompageref{IV}
-  \item [{JADE}]\begingroup Java Agent Development Framework\nomeqref {0.0}\nompageref{IV}
-  \item [{JVM}]\begingroup Java Virtual Machine\nomeqref {0.0}\nompageref{IV}
-  \item [{KISS}]\begingroup Keep It Small \& Simple\nomeqref {0.0}\nompageref{IV}
-  \item [{LADT}]\begingroup Local Agent Descriptor Table\nomeqref {0.0}\nompageref{IV}
-  \item [{MAS}]\begingroup Multi Agent System\nomeqref {0.0}\nompageref{IV}
-  \item [{P2P}]\begingroup Peer-to-Peer\nomeqref {0.0}\nompageref{IV}
-  \item [{PDF}]\begingroup Portable Document Format\nomeqref {0.0}\nompageref{IV}
-  \item [{RMA}]\begingroup Remote Monitoring Agent\nomeqref {0.0}\nompageref{IV}
-  \item [{SMAS}]\begingroup Scala Multi Agent System\nomeqref {0.0}\nompageref{IV}
-  \item [{VM}]\begingroup Virtual Machine\nomeqref {0.0}\nompageref{IV}
-  \item [{XML}]\begingroup Extensible Markup Language\nomeqref {0.0}\nompageref{IV}
+  \item [{ACL}]\begingroup Agent Communication Language\nomeqref {0.0}\nompageref{VI}
+  \item [{AMS}]\begingroup Agent Management System\nomeqref {0.0}\nompageref{VI}
+  \item [{Cougaar}]\begingroup Cognitive Agent Architecture\nomeqref {0.0}\nompageref{VI}
+  \item [{CRUD}]\begingroup Create, read, update and delete\nomeqref {0.0}\nompageref{VI}
+  \item [{CT}]\begingroup Container Table\nomeqref {0.0}\nompageref{VI}
+  \item [{DARPA}]\begingroup Defense Advanced Research Projects Agency\nomeqref {0.0}\nompageref{VI}
+  \item [{FIPA}]\begingroup Foundation for Intelligent Physical Agents\nomeqref {0.0}\nompageref{VI}
+  \item [{FPGA}]\begingroup Field Programmable Gate Array\nomeqref {0.0}\nompageref{VI}
+  \item [{GADT}]\begingroup Global Agent Descriptor Table\nomeqref {0.0}\nompageref{VI}
+  \item [{JADE}]\begingroup Java Agent Development Framework\nomeqref {0.0}\nompageref{VI}
+  \item [{JVM}]\begingroup Java Virtual Machine\nomeqref {0.0}\nompageref{VI}
+  \item [{KISS}]\begingroup Keep It Small \& Simple\nomeqref {0.0}\nompageref{VI}
+  \item [{LADT}]\begingroup Local Agent Descriptor Table\nomeqref {0.0}\nompageref{VI}
+  \item [{MAS}]\begingroup Multi Agent System\nomeqref {0.0}\nompageref{VI}
+  \item [{P2P}]\begingroup Peer-to-Peer\nomeqref {0.0}\nompageref{VI}
+  \item [{PDF}]\begingroup Portable Document Format\nomeqref {0.0}\nompageref{VI}
+  \item [{SMAS}]\begingroup Scala Multi Agent System\nomeqref {0.0}\nompageref{VI}
+  \item [{VM}]\begingroup Virtual Machine\nomeqref {0.0}\nompageref{VI}
+  \item [{XML}]\begingroup Extensible Markup Language\nomeqref {0.0}\nompageref{VI}
 
 \end{thenomenclature}
