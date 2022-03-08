@@ -2,6 +2,14 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces CAN System Diagram}}{3}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces CAN-Data Frame Architektur}}{5}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces CAN-Remote Frame Architektur}}{7}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Can-Error-Frame}}{7}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Can-Overload-Frame}}{8}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Can-Bus Connexion}}{8}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces CAN_H and CAN_L}}{9}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces SPI Bus}}{10}{figure.caption.16}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

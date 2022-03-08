@@ -4,13 +4,13 @@
 \section{Motivation}
 \label{sec:Einl:Motivation}
 
-Aufgrund der Einsätze von immer mehr Geräten, deren Funktionen uns das Leben erreichten. Egal, ob die Waschmaschine zu Hause, der Drucker in unseren Büros, oder die Kaffeemaschine in der Kantine, befindet sich in alle diese Geräte kleine Computer, die ihre Aufgabe erledigen. Aber durch die gestiegene Rechenleistung und die erweiterten Kapazitäten eines Mikroprozessors werden die Aufgaben von kleine Computer immer komplexer.  Es besteht dann die Möglichkeit, ein vollwertiges Betriebssystem einzusetzen. Hier hat sich Linux durch die vielseitige Anwendbarkeit und das offene Ökosystem für Embedded Devices besonders bewährt. 
-Am Edag Engineering GmbH, wurde im Rahme des internen Projekts, ein Imge Processing Unit (IPU) Hardware Plattform auf Basis des Kria KV260 FPGA(Field Programmable Gate Array) entwickelt.  Auf dieser Plattform wird dann aufgrund der Komplexität des Projekts ein Linux Betriebssystem eingesetzt, mit dem die 8 wesentlichen Anwendungen des Projekts verwalten werden. 
+Aufgrund der Einsätze von immer mehr Geräten, deren Funktionen uns das Leben erreichten. Egal, ob die Waschmaschine zu Hause, der Drucker in unseren Büros, oder die Kaffeemaschine in der Kantine, werden in alle diese Geräte kleine Computer gebaut, damit sie ihre Aufgabe bequem erledigen. Aber durch die gestiegene Rechenleistung und die erweiterten Kapazitäten von Mikroprozessors werden die Aufgaben von solche kleine Computer immer komplexer. Es besteht dann die Möglichkeit, ein vollwertiges Betriebssystem im diesen einzusetzen. Hier hat sich Linux durch die vielseitige Anwendbarkeit und das offene Ökosystem für Embedded Devices besonders bewährt. 
+Am EDAG Engineering GmbH, wurde im Rahme des internen Projekts, ein Imge Processing Unit (IPU) Hardware Plattform auf Basis des Kria KV260 FPGA(Field Programmable Gate Array) entwickelt.  Auf dieser Plattform wird dann aufgrund der Komplexität des Projekts ein Linux Betriebssystem eingesetzt, mit dem die 8 wesentlichen Anwendungen des Projekts konfiguriert, kompiliert, und zum User zur Verfügung gestellt wird. 
 
 \section{Ziel der Arbeit}
 \label{sec:Einl:Ziel_der_Arbeit}
 
-Angesichts des Engpasses an Halbleitern, dem die Welt in den letzten Monaten gegenübersteht, wird es immer schwieriger, hochwertige Bauteile wie das Kria KV260, der für das Projekt verwendet wird, zu finden. Statt auf der einzigen Platine des Unternehmens, musste ich meine Arbeit auf einer alternativen Platine durchführen. 
+Angesichts der weltweiten Krise auf dem Halbleitermarkt in den letzten Monaten, wurde es immer schwieriger, hochwertige Komponenten, wie die für das Projekt verwendeten Kria KV260 Board zu finden. Statt auf der einzigen Platine des Unternehmens, musste ich meine Arbeit auf einer alternativen Platine durchführen. Also meine Arbeit in den letzten Monaten bei EDAG Engineering GmbH wurde in zwei Aufgaben aufgeteilt.
 Das erste Ziel dieser Arbeit war es, ein in der Firma entwickelte CAN FD Controller (mcp251xfd), der über SPI mit einem Zynq UltraScale + MPSoC ZCU106 Board verbunden ist, in Betrieb zu nehmen, damit verschiedenen Can Node vom Linux angesprochen wird. 
 
 Im Anschluss musste ich 3 von den in der Firma entwickelte Applikationen, im Linux bauen, damit das System automatisch mit den Anwendungen bootet. Dafür müsste ich Rezepte schreiben, die sich darum kümmern werden, die Applikationen zu konfigurieren, zu kompilieren und zu installieren. 
@@ -23,6 +23,6 @@ Diese Arbeit lässt sich in 4 Hauptkapitel aufteilen:
 	\item \textbf{Die Einleitung}: In der Einleitung werden, die Motivation, das Ziel der Arbeit und ein gesamter Überblick auf dem Ablauf der Arbeit behandeln.
 	\item  \textbf{In den technischen Grundlagen} wird zuerst erklärt, wie das System (CAN Controller und die Zynq Mp Plattform) gebaut und funktionieren soll. Des Weiteren werden, der CAN Bus System und die SPI Interface erklärt. Dann wird dem Grundprinzip von Embedded Linux Systemen und deren Komponenten erläutert. Zum Schluss erfolgt, die Beschreibung der Petalinux Tools Flow, welches der Build System, der verwendet wird, um Linux Distribution für Xilinx Bausteinen zu kompilieren.
 	\item \textbf{Im Versuch Aufbau} wird das Projekt, in dem ich gearbeitet habe dargestellt, dann folgt eine tiefe beschreibung der Hardware. Anschließen wird detaliert auf verschiedenen Schritte für das Bauen des System eingegangen. 
-	\item \textbf{Im Kapitel Fazit und Ausblick} werden aufgetretene Probleme und Herausforderungen erläutert, es wird analysiert, wie  das Ergebnis von dem Ziel entfernt ist. Und anschließend wird ein Ausblick auf die möglichen Verbesserungen gegeben. 
+	\item \textbf{Im Kapitel Fazit und Ausblick} werden aufgetretene Probleme und Herausforderungen erläutert, es wird analysiert, wie weit das Ergebnis von dem Ziel entfernt ist. Und anschließend wird ein Ausblick auf die möglichen Verbesserungen gegeben. 
 \end{itemize}
 

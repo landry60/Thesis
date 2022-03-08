@@ -1,19 +1,19 @@
-\nomenclatureentry{aFPGA@[{FPGA}]\begingroup Field Programmable Gate Array\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aSMAS@[{SMAS}]\begingroup Scala Multi Agent System\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aMAS@[{MAS}]\begingroup Multi Agent System\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aPDF@[{PDF}]\begingroup Portable Document Format\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aFIPA@[{FIPA}]\begingroup Foundation for Intelligent Physical Agents\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aJADE@[{JADE}]\begingroup Java Agent Development Framework\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aAMS@[{AMS}]\begingroup Agent Management System\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aCT@[{CT}]\begingroup Container Table\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aGADT@[{GADT}]\begingroup Global Agent Descriptor Table\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aLADT@[{LADT}]\begingroup Local Agent Descriptor Table\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aACL@[{ACL}]\begingroup Agent Communication Language\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aCougaar@[{Cougaar}]\begingroup Cognitive Agent Architecture\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aDARPA@[{DARPA}]\begingroup Defense Advanced Research Projects Agency\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aJVM@[{JVM}]\begingroup Java Virtual Machine\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aCRUD@[{CRUD}]\begingroup Create, read, update and delete\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aXML@[{XML}]\begingroup Extensible Markup Language\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aVM@[{VM}]\begingroup Virtual Machine\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aKISS@[{KISS}]\begingroup Keep It Small \& Simple\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{aP2P@[{P2P}]\begingroup Peer-to-Peer\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{aFPGA@[{FPGA}]\begingroup Field Programmable Gate Array\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aSOF@[{SOF}]\begingroup Start of Frame\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aRTR@[{RTR}]\begingroup Remote Transmission Request\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aDLC@[{DLC}]\begingroup Data Length Code\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aCRC@[{CRC}]\begingroup Cyclic Redundancy Check\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aJADE@[{JADE}]\begingroup Java Agent Development Framework\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aAMS@[{AMS}]\begingroup Agent Management System\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aCT@[{CT}]\begingroup Container Table\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aGADT@[{GADT}]\begingroup Global Agent Descriptor Table\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aLADT@[{LADT}]\begingroup Local Agent Descriptor Table\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aACL@[{ACL}]\begingroup Agent Communication Language\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aCougaar@[{Cougaar}]\begingroup Cognitive Agent Architecture\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aDARPA@[{DARPA}]\begingroup Defense Advanced Research Projects Agency\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aJVM@[{JVM}]\begingroup Java Virtual Machine\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aCRUD@[{CRUD}]\begingroup Create, read, update and delete\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aXML@[{XML}]\begingroup Extensible Markup Language\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aSPI@[{SPI}]\begingroup Serial Peripheral Interface\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aCAN@[{CAN}]\begingroup Control Area Network\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aIPU@[{IPU}]\begingroup Image Processing Unit\nomeqref {0.0}|nompageref}{V}
