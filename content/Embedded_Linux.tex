@@ -1,4 +1,18 @@
 \section{Embedded Linux}
 \label{cha:ver:sec:Embedded_Linux}
 
+Bevor ich auf \Fachbegriff{Embedded Linux} eingehe, was eigentlich der englische Begriff von \Fachbegriff{eingebettetes System} ist, möchte ich zunächst klarstellen, dass es keine spezielle Version des Linux-Kernels für Embedded-Systeme gibt. Das Wort \Fachbegriff{Linux} in embedded Linux bezeichnet hier den Mainline-Linux-Kernel, der auf einem embedded System läuft. Aus Sprachmissbrauchsgründen wird es anstelle von "Linux auf einem eingebetteten System" verwendet.\\
+Im Bereich der eingebetteten Softwareentwicklung wird entschieden, ob man auf Basis von Baremetal oder auf Basis eines Betriebssystems programmiert. Ein Betriebssystem bringt gegenüber der direkten Systemprogrammierung Vorteile mit sich, die es zu berücksichtigen gilt. Bare Metal heißt, dass ein Programm oder eine Software ohne Unterstützung eines Betriebssystems direkt auf der Hardwareebene ausgeführt wird. Anders ausgedrückt, programmiert man einen Mikrocontroller direkt mit ein paar Zeilen C- oder Assembler-Code. Bei embedded Linux im Gegenteil werden Anwendungen über dem Kernel ausgeführt oder von diesem unterstützt und arbeiten so als Betriebssystem (OS), Jede Kommunikation zwischen Hardware und Software läuft also über den Kernel, was tatsächlich viele Vorteile mit sich bringt.
+
+\begin{itemize}
+	\item Treiber-Unterstützung für viele Geräte
+	\item Prozess- und Speicherverwaltung
+	\item Bestehende Anwendungen und Netzwerkprotokolle
+	\item Skalierbarkeit und Echtzeitfähigkeit 
+	\item Große Entwickler-Community
+\end{itemize}
+
+Man spart nicht nur Zeit, sondern trägt auch zur Wartbarkeit der Software bei, wenn man vorhandene Software verwendet. Wenn man solche Komponenten von Null an entwickelt, dann hat man eine Quelle für eventuelle Fehler, die bei betriebssystembasierter Software wegen der hohen Verbreitung und Unterstützung durch die Gemeinschaft und die Entwickler in der Regel minimiert werden. Außerdem haben Betriebssysteme den Vorteil, dass die Software leichter auf Nachfolgeplattformen und mithilfe von Standards wie POSIX auf andere Betriebssysteme übertragen werden kann.\\
+Im Rahmen dieser Arbeit wird ein Linux-Kernel auf Basis der Kernel Version 5.10 verwendet [\cite{kernel}], der um einige Zynq-spezifische Features in Form von Treibern erweitert wurde. Eine Liste der von Xilinx zur Verfügung gestellten Treiber ist im Official Xilinx Wiki zu finden.
+Eine Liste der von Xilinx bereitgestellten Treiber kann man 
 

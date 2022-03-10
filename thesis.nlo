@@ -3,17 +3,12 @@
 \nomenclatureentry{aRTR@[{RTR}]\begingroup Remote Transmission Request\nomeqref {0.0}|nompageref}{V}
 \nomenclatureentry{aDLC@[{DLC}]\begingroup Data Length Code\nomeqref {0.0}|nompageref}{V}
 \nomenclatureentry{aCRC@[{CRC}]\begingroup Cyclic Redundancy Check\nomeqref {0.0}|nompageref}{V}
-\nomenclatureentry{aJADE@[{JADE}]\begingroup Java Agent Development Framework\nomeqref {0.0}|nompageref}{V}
-\nomenclatureentry{aAMS@[{AMS}]\begingroup Agent Management System\nomeqref {0.0}|nompageref}{V}
-\nomenclatureentry{aCT@[{CT}]\begingroup Container Table\nomeqref {0.0}|nompageref}{V}
-\nomenclatureentry{aGADT@[{GADT}]\begingroup Global Agent Descriptor Table\nomeqref {0.0}|nompageref}{V}
-\nomenclatureentry{aLADT@[{LADT}]\begingroup Local Agent Descriptor Table\nomeqref {0.0}|nompageref}{V}
-\nomenclatureentry{aACL@[{ACL}]\begingroup Agent Communication Language\nomeqref {0.0}|nompageref}{V}
-\nomenclatureentry{aCougaar@[{Cougaar}]\begingroup Cognitive Agent Architecture\nomeqref {0.0}|nompageref}{V}
-\nomenclatureentry{aDARPA@[{DARPA}]\begingroup Defense Advanced Research Projects Agency\nomeqref {0.0}|nompageref}{V}
-\nomenclatureentry{aJVM@[{JVM}]\begingroup Java Virtual Machine\nomeqref {0.0}|nompageref}{V}
-\nomenclatureentry{aCRUD@[{CRUD}]\begingroup Create, read, update and delete\nomeqref {0.0}|nompageref}{V}
-\nomenclatureentry{aXML@[{XML}]\begingroup Extensible Markup Language\nomeqref {0.0}|nompageref}{V}
-\nomenclatureentry{aSPI@[{SPI}]\begingroup Serial Peripheral Interface\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aPMU@[{PMU}]\begingroup Platform Management Unit\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aCSU@[{CSU}]\begingroup Configuration Security Unit\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aFSBL@[{FSBL}]\begingroup First Stage Bootloader Codes\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aCSU@[{CSU}]\begingroup Configuration Security Unit\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aOCM@[{OCM}]\begingroup On-Chip RAM\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aAPU@[{APU}]\begingroup Application processing units\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aRPU@[{RPU}]\begingroup Real-time processing units\nomeqref {0.0}|nompageref}{V}
 \nomenclatureentry{aCAN@[{CAN}]\begingroup Control Area Network\nomeqref {0.0}|nompageref}{V}
 \nomenclatureentry{aIPU@[{IPU}]\begingroup Image Processing Unit\nomeqref {0.0}|nompageref}{V}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.11.10)  7 MAR 2022 20:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.11.10)  10 MAR 2022 15:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1611,7 +1611,7 @@ chapter 1.
 ]) [2] (./content/Technische_Grundlagen.tex
 chapter 2.
 ) (./content/Technische_Ausgangssituation.tex
-<./images/can_bus_system.jpeg, id=175, 801.29362pt x 409.68056pt>
+<./images/can_bus_system.jpeg, id=183, 801.29362pt x 409.68056pt>
 File: ./images/can_bus_system.jpeg Graphic file (type jpg)
 <use ./images/can_bus_system.jpeg>
 Package pdftex.def Info: ./images/can_bus_system.jpeg  used on input line 6.
@@ -1630,13 +1630,13 @@ Overfull \hbox (15.75343pt too wide) in paragraph at lines 36--37
 e-Übertragungen
  []
 
-<./images/CAN-data-frame.jpg, id=189, 635.37375pt x 382.42876pt>
+<./images/CAN-data-frame.jpg, id=197, 635.37375pt x 382.42876pt>
 File: ./images/CAN-data-frame.jpg Graphic file (type jpg)
 <use ./images/CAN-data-frame.jpg>
 Package pdftex.def Info: ./images/CAN-data-frame.jpg  used on input line 43.
 (pdftex.def)             Requested size: 398.3386pt x 239.7643pt.
 [5 <./images/CAN-data-frame.jpg>]
-<./images/CAN-remote-frame.jpg, id=201, 632.3625pt x 396.48125pt>
+<./images/CAN-remote-frame.jpg, id=209, 632.3625pt x 396.48125pt>
 File: ./images/CAN-remote-frame.jpg Graphic file (type jpg)
 <use ./images/CAN-remote-frame.jpg>
 Package pdftex.def Info: ./images/CAN-remote-frame.jpg  used on input line 73.
@@ -1646,24 +1646,24 @@ Package pdftex.def Info: ./images/CAN-remote-frame.jpg  used on input line 73.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6]
-<./images/Can-error-frame.jpg, id=212, 627.34375pt x 214.8025pt>
+<./images/Can-error-frame.jpg, id=220, 627.34375pt x 214.8025pt>
 File: ./images/Can-error-frame.jpg Graphic file (type jpg)
 <use ./images/Can-error-frame.jpg>
 Package pdftex.def Info: ./images/Can-error-frame.jpg  used on input line 92.
 (pdftex.def)             Requested size: 398.3386pt x 136.39479pt.
-<./images/Can-overload-frame.jpg, id=218, 615.29875pt x 249.93375pt>
+<./images/Can-overload-frame.jpg, id=226, 615.29875pt x 249.93375pt>
 File: ./images/Can-overload-frame.jpg Graphic file (type jpg)
 <use ./images/Can-overload-frame.jpg>
 Package pdftex.def Info: ./images/Can-overload-frame.jpg  used on input line 10
 5.
 (pdftex.def)             Requested size: 398.3386pt x 161.80669pt.
  [7 <./images/Can-remote-frame.jpg> <./images/Can-error-frame.jpg>]
-<./images/Can-connexion.jpg, id=229, 669.50125pt x 391.4625pt>
+<./images/Can-connexion.jpg, id=237, 669.50125pt x 391.4625pt>
 File: ./images/Can-connexion.jpg Graphic file (type jpg)
 <use ./images/Can-connexion.jpg>
 Package pdftex.def Info: ./images/Can-connexion.jpg  used on input line 133.
 (pdftex.def)             Requested size: 398.3386pt x 232.92009pt.
-<./images/can-high-low.jpg, id=236, 681.54625pt x 443.6575pt>
+<./images/can-high-low.jpg, id=244, 681.54625pt x 443.6575pt>
 File: ./images/can-high-low.jpg Graphic file (type jpg)
 <use ./images/can-high-low.jpg>
 Package pdftex.def Info: ./images/can-high-low.jpg  used on input line 144.
@@ -1671,17 +1671,75 @@ Package pdftex.def Info: ./images/can-high-low.jpg  used on input line 144.
 )
 (./content/SPI_Schnitstelle.tex [8 <./images/Can-overload-frame.jpg> <./images/
 Can-connexion.jpg>] [9 <./images/can-high-low.jpg>]
-<./images/spi-bus.jpg, id=255, 405.515pt x 452.69125pt>
+<./images/spi-bus.jpg, id=263, 405.515pt x 452.69125pt>
 File: ./images/spi-bus.jpg Graphic file (type jpg)
 <use ./images/spi-bus.jpg>
 Package pdftex.def Info: ./images/spi-bus.jpg  used on input line 10.
 (pdftex.def)             Requested size: 318.67209pt x 355.75714pt.
- [10 <./images/spi-bus.jpg>]) (./content/Embedded_Linux.tex) (./content/Kompone
-nte_Embedded_Linux.tex)
-(./content/Petalinux_tool_flow.tex) [11] (./content/Versuch_Aufbau.tex
+ [10 <./images/spi-bus.jpg>]) (./content/Embedded_Linux.tex [11]) (./content/Ko
+mponente_Embedded_Linux.tex
+<./images/boot-flow.jpg, id=285, 610.28pt x 245.91875pt>
+File: ./images/boot-flow.jpg Graphic file (type jpg)
+<use ./images/boot-flow.jpg>
+Package pdftex.def Info: ./images/boot-flow.jpg  used on input line 15.
+(pdftex.def)             Requested size: 438.17488pt x 176.57353pt.
+
+Overfull \hbox (39.83629pt too wide) in paragraph at lines 15--16
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12]) (./content/Petalinux_tool_flow.tex [13 <./images/boot-flow.jpg>]
+Overfull \hbox (0.95601pt too wide) in paragraph at lines 3--5
+\T1/lmr/m/n/10.95 PetaLinux ist ein Em-bed-ded Li-nux Soft-wa-re De-ve-lop-ment
+ Kit (SDK), das auf FPGA-
+ []
+
+
+Overfull \hbox (19.92776pt too wide) in paragraph at lines 3--5
+\T1/lmr/m/n/10.95 für Xilinx-Prozessorsysteme ver-wen-det wer-den. So ar-bei-te
+t Pe-ta-Li-nux mit den Hardware-
+ []
+
+<./images/petalinux-toolflow.jpg, id=305, 1024.82875pt x 586.19pt>
+File: ./images/petalinux-toolflow.jpg Graphic file (type jpg)
+<use ./images/petalinux-toolflow.jpg>
+Package pdftex.def Info: ./images/petalinux-toolflow.jpg  used on input line 8.
+
+(pdftex.def)             Requested size: 438.17488pt x 250.62566pt.
+
+Overfull \hbox (39.83629pt too wide) in paragraph at lines 8--9
+ [] 
+ []
+
+[14 <./images/petalinux-toolflow.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 29--31
+
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) [15]
+Overfull \hbox (59.34068pt too wide) in paragraph at lines 53--54
+\T1/lmr/m/n/10.95 Viva-do Hardware-description-file(HDF). Pe-ta-Li-nux ver-wen-
+det HSI-Dienstprogramme,
+ []
+
+
+Overfull \hbox (10.93362pt too wide) in paragraph at lines 53--54
+\T1/lmr/m/n/10.95 Ports und Schnitt-stel-len, die in an-de-ren Tools wie dem De
+vicetree-Generator
+ []
+
+) [16] (./content/Versuch_Aufbau.tex
 chapter 3.
 ) (./content/Allgemein_Projekt.tex) (./content/Hardware_Platform.tex)
-(./content/Konfigurieren_System.tex) [12
+(./content/Konfigurieren_System.tex) [17
 
 
 ] (./content/Fazit_Ausblick.tex
@@ -1690,12 +1748,30 @@ chapter 4.
 \tf@brf=\write10
 \openout10 = `thesis.brf'.
 
- [13
+ [18
 
 
 ]
 chapter without number
-) [14
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+\T1/lmtt/m/n/10.95 manuals / xilinx2019 _ 1 / ug1144-[]petalinux-[]tools-[]refe
+rence-[]guide . pdf$[][]
+ []
+
+
+Underfull \hbox (badness 4673) in paragraph at lines 67--67
+\T1/lmr/m/sc/10.95 UG1137\T1/lmr/m/n/10.95 :  Zynq Ul-tra-S-ca-le.  In: \T1/lmr
+/m/it/10.95 User gui-de \T1/lmr/m/n/10.95 1137 (2017), 1--268.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[][]$\T1/lmtt/m/n/10.95 https : / / www . xilinx . com / support / documentatio
+n / user _ guides /
+ []
+
+) [19
 
 ]
 \openout2 = `content/jurat.aux'.
@@ -1705,7 +1781,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-) [15
+) [20
 
 ]
 
@@ -1939,7 +2015,11 @@ content/SPI_Schnitstelle.tex
 ./images/spi-bus.jpg
 content/Embedded_Linux.tex
 content/Komponente_Embedded_Linux.tex
+./images/boot-flow.jpg
 content/Petalinux_tool_flow.tex
+./images/petalinux-toolflow.jpg
+lstlang1.sty    2020/03/24 1.8d listings language file
+lstlang1.sty    2020/03/24 1.8d listings language file
 content/Versuch_Aufbau.tex
 content/Allgemein_Projekt.tex
 content/Hardware_Platform.tex
@@ -1954,30 +2034,32 @@ appendix/Datentraeger.tex
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: D61D665B4D22C302504B7A1461BBF8F9;461.
+(rerunfilecheck)             Checksum: 679083050E40208E4A278877833BE697;776.
  ) 
 Here is how much of TeX's memory you used:
- 30672 strings out of 479304
- 627502 string characters out of 5869778
- 1215002 words of memory out of 5000000
- 47016 multiletter control sequences out of 15000+600000
- 490179 words of font info for 81 fonts, out of 8000000 for 9000
+ 31130 strings out of 479304
+ 632209 string characters out of 5869778
+ 1393703 words of memory out of 5000000
+ 47444 multiletter control sequences out of 15000+600000
+ 497766 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,19n,120p,10626b,958s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,19n,120p,10626b,1304s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/te
 xlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/publ
 ic/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf
-/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/font
-s/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on thesis.pdf (24 pages, 602036 bytes).
+/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on thesis.pdf (29 pages, 940683 bytes).
 PDF statistics:
- 469 PDF objects out of 1000 (max. 8388607)
- 380 compressed objects within 4 object streams
- 73 named destinations out of 1000 (max. 500000)
- 423 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 567 PDF objects out of 1000 (max. 8388607)
+ 461 compressed objects within 5 object streams
+ 92 named destinations out of 1000 (max. 500000)
+ 449 words of extra memory for PDF output out of 10000 (max. 10000000)
 
