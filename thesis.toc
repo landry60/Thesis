@@ -22,16 +22,17 @@
 \contentsline {section}{\numberline {2.6}Petalinux Tool Flow}{14}{section.2.6}%
 \contentsline {subsubsection}{\numberline {2.6.0.1}Petalinux Installation}{15}{subsubsection.2.6.0.1}%
 \contentsline {subsubsection}{\numberline {2.6.0.2}Wichtige Petalinux Kommando}{15}{subsubsection.2.6.0.2}%
-\contentsline {chapter}{\numberline {3}Versuch Aufbau}{17}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Allgemein über das Projekt}{17}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Hardware Platform}{17}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}MCP251XFD CAN Controller}{17}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Zynq UltraScale + MPSoC ZCU106 Evaluation Board}{17}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Konfiguration und Bauen des Systems}{17}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Fazit und Ausblick}{18}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Fazit}{18}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Ausblick}{18}{section.4.2}%
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{19}{chapter*.19}%
+\contentsline {subsubsection}{\numberline {2.6.0.3}Petalinux Projekt Strukture}{17}{subsubsection.2.6.0.3}%
+\contentsline {chapter}{\numberline {3}Versuch Aufbau}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Allgemein über das Projekt}{19}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Hardware Platform}{19}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}MCP251XFD CAN Controller}{19}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Zynq UltraScale + MPSoC ZCU106 Evaluation Board}{19}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Konfiguration und Bauen des Systems}{19}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Fazit und Ausblick}{20}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Fazit}{20}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Ausblick}{20}{section.4.2}%
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{21}{chapter*.20}%
 \contentsline {chapter}{\numberline {A}Anhang}{a}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Inhalt des Datenträgers}{a}{section.A.1}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

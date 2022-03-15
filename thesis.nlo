@@ -10,5 +10,7 @@
 \nomenclatureentry{aOCM@[{OCM}]\begingroup On-Chip RAM\nomeqref {0.0}|nompageref}{V}
 \nomenclatureentry{aAPU@[{APU}]\begingroup Application processing units\nomeqref {0.0}|nompageref}{V}
 \nomenclatureentry{aRPU@[{RPU}]\begingroup Real-time processing units\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aIP@[{IP}]\begingroup Intellectual property\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aBSP@[{BSP}]\begingroup board support packages\nomeqref {0.0}|nompageref}{V}
 \nomenclatureentry{aCAN@[{CAN}]\begingroup Control Area Network\nomeqref {0.0}|nompageref}{V}
 \nomenclatureentry{aIPU@[{IPU}]\begingroup Image Processing Unit\nomeqref {0.0}|nompageref}{V}
