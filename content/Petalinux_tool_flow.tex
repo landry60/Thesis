@@ -15,7 +15,7 @@ Ein wesentlicher Vorteil von petalinux ist, dass es eine Reihe von vereinfachten
 
 Wie man in der Abbildung ~\ref{fig:petalinux:tool:flow} sehen kann, ist es möglich, mit Vivado erstellte Hardware-Designs in petalinux zu importieren, einige Anwendungen in petalinux einzubinden und ein Linux-Image zu erstellen.  
 
-\subsubsection{Petalinux Installation}
+\subsection{Petalinux Installation}
 Wie jedes Build-System benötigt petalinux viele Ressourcen auf Ihrem PC. Um die Kompilierzeit deutlich zu reduzieren, ist es daher sinnvoll, einen Computer mit folgenden Eigenschaften zu verwenden.\cite{Xilinx2020}
 
 \begin{itemize}
@@ -42,7 +42,7 @@ Mit den folgenden Befehlen kann man die Datei ausführbar machen und der Install
 	$./petalinux-v<petalinux-version>-final-installer.run
 \end{lstlisting}
 
-\subsubsection{Wichtige Petalinux Kommando}
+\subsection{Wichtige Petalinux Kommando}
 \begin{itemize}
 	\item \textbf{petalinux-create}: Erstellt ein neue Petalinux Projekt. man kann dem Befehl verschiedenen Optionen zuweisen, 
 	\begin{itemize}
@@ -87,7 +87,7 @@ Mit den folgenden Befehlen kann man die Datei ausführbar machen und der Install
 	
 \end{itemize}
 
-\subsubsection{Petalinux Projekt Strukture}
+\subsection{Petalinux Projekt Strukture}
 In diesem Abschnitt möchte ich über die Petalinux-Projektstruktur sprechen. Es ist wichtig, dies zu erwähnen, damit klar ist, wie und wo Komponenten, Module oder Software geändert werden können.
 
 \begin{figure}[h]
@@ -103,5 +103,7 @@ In Abbildung ~\ref{fig:petalinux:projektstruktur} ist eine typische Petalinux Pr
 
 \begin{itemize}
 	\item \textbf{project-spec}: In diesem Verzeichnis werden alle Änderungen an dem Projekt durchgeführt. Hier können z. B. neue Projekt Layers erstellen, den Gerätebaum(Device-tree) geändert oder sogar Rezepte für Software, die vom Kernel kompiliert werden soll, erstellt werden. 
-	\item \textbf{pre-built}: Dieses Verzeichnis beinhaltet alle Board-spezifischen Design- und Konfigurationsdateien, vorgefertigte und getestete Hardware und Software-Images, die Sie auf Ihr Board direkt heruntergeladen werden können. Der Ordner ist jedoch nur sichtbar, wenn man das Projekt auf der Basis des für das Board spezifischen Board Support Package (BSP) erstellt haben. 
+	\item \textbf{pre-built}: Dieses Verzeichnis beinhaltet alle Board-spezifischen Design- und Konfigurationsdateien, vorgefertigte und getestete Hardware und Software-Images, die Sie auf dem Board direkt heruntergeladen werden können. Der Ordner ist jedoch nur sichtbar, wenn man das Projekt auf der Basis des für das Board spezifischen Board Support Package (BSP) erstellt hat. 
+	\item \textbf{hardware}: 
+	 
 \end{itemize}

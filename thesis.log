@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.11.10)  12 MAR 2022 18:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.11.10)  22 MAR 2022 19:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -798,8 +798,28 @@ Package: everysel 2021/01/20 v2.1 EverySelectfont Package (MS)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen192
+\lightrulewidth=\dimen193
+\cmidrulewidth=\dimen194
+\belowrulesep=\dimen195
+\belowbottomsep=\dimen196
+\aboverulesep=\dimen197
+\abovetopsep=\dimen198
+\cmidrulesep=\dimen199
+\cmidrulekern=\dimen256
+\defaultaddspace=\dimen257
+\@cmidla=\count320
+\@cmidlb=\count321
+\@aboverulesep=\dimen258
+\@belowrulesep=\dimen259
+\@thisruleclass=\count322
+\@lastruleclass=\count323
+\@thisrulewidth=\dimen260
+)
 
-Package array Warning: Column w is already defined on input line 117.
+Package array Warning: Column w is already defined on input line 118.
 
 (/usr/share/texlive/texmf-dist/tex/latex/paralist/paralist.sty
 Package: paralist 2017/01/22 v2.7 Extended list environments
@@ -818,8 +838,8 @@ Package: todonotes 2018/11/22
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks31
-\pgfutil@tempdima=\dimen192
-\pgfutil@tempdimb=\dimen193
+\pgfutil@tempdima=\dimen261
+\pgfutil@tempdimb=\dimen262
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
@@ -843,26 +863,26 @@ Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
 ex
 \pgfkeys@tmptoks=\toks34
 ))
-\pgf@x=\dimen194
-\pgf@y=\dimen195
-\pgf@xa=\dimen196
-\pgf@ya=\dimen197
-\pgf@xb=\dimen198
-\pgf@yb=\dimen199
-\pgf@xc=\dimen256
-\pgf@yc=\dimen257
-\pgf@xd=\dimen258
-\pgf@yd=\dimen259
+\pgf@x=\dimen263
+\pgf@y=\dimen264
+\pgf@xa=\dimen265
+\pgf@ya=\dimen266
+\pgf@xb=\dimen267
+\pgf@yb=\dimen268
+\pgf@xc=\dimen269
+\pgf@yc=\dimen270
+\pgf@xd=\dimen271
+\pgf@yd=\dimen272
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count320
-\c@pgf@countb=\count321
-\c@pgf@countc=\count322
-\c@pgf@countd=\count323
+\c@pgf@counta=\count324
+\c@pgf@countb=\count325
+\c@pgf@countc=\count326
+\c@pgf@countd=\count327
 \t@pgf@toka=\toks35
 \t@pgf@tokb=\toks36
 \t@pgf@tokc=\toks37
-\pgf@sys@id@count=\count324
+\pgf@sys@id@count=\count328
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
 )
@@ -878,8 +898,8 @@ File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfsyssoftpath@smallbuffer@items=\count325
-\pgfsyssoftpath@bigbuffer@items=\count326
+\pgfsyssoftpath@smallbuffer@items=\count329
+\pgfsyssoftpath@bigbuffer@items=\count330
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -892,8 +912,8 @@ Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen260
-\pgfmath@count=\count327
+\pgfmath@dimen=\dimen273
+\pgfmath@count=\count331
 \pgfmath@box=\box71
 \pgfmath@toks=\toks38
 \pgfmath@stack@operand=\toks39
@@ -917,38 +937,38 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count328
+\c@pgfmathroundto@lastzeros=\count332
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@picminx=\dimen261
-\pgf@picmaxx=\dimen262
-\pgf@picminy=\dimen263
-\pgf@picmaxy=\dimen264
-\pgf@pathminx=\dimen265
-\pgf@pathmaxx=\dimen266
-\pgf@pathminy=\dimen267
-\pgf@pathmaxy=\dimen268
-\pgf@xx=\dimen269
-\pgf@xy=\dimen270
-\pgf@yx=\dimen271
-\pgf@yy=\dimen272
-\pgf@zx=\dimen273
-\pgf@zy=\dimen274
+\pgf@picminx=\dimen274
+\pgf@picmaxx=\dimen275
+\pgf@picminy=\dimen276
+\pgf@picmaxy=\dimen277
+\pgf@pathminx=\dimen278
+\pgf@pathmaxx=\dimen279
+\pgf@pathminy=\dimen280
+\pgf@pathmaxy=\dimen281
+\pgf@xx=\dimen282
+\pgf@xy=\dimen283
+\pgf@yx=\dimen284
+\pgf@yy=\dimen285
+\pgf@zx=\dimen286
+\pgf@zy=\dimen287
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@path@lastx=\dimen275
-\pgf@path@lasty=\dimen276
+\pgf@path@lastx=\dimen288
+\pgf@path@lasty=\dimen289
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@shorten@end@additional=\dimen277
-\pgf@shorten@start@additional=\dimen278
+\pgf@shorten@end@additional=\dimen290
+\pgf@shorten@start@additional=\dimen291
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
@@ -956,19 +976,19 @@ File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfpic=\box72
 \pgf@hbox=\box73
 \pgf@layerbox@main=\box74
-\pgf@picture@serial@count=\count329
+\pgf@picture@serial@count=\count333
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgflinewidth=\dimen279
+\pgflinewidth=\dimen292
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@pt@x=\dimen280
-\pgf@pt@y=\dimen281
-\pgf@pt@temp=\dimen282
+\pgf@pt@x=\dimen293
+\pgf@pt@y=\dimen294
+\pgf@pt@temp=\dimen295
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
@@ -984,13 +1004,13 @@ File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfarrowsep=\dimen283
+\pgfarrowsep=\dimen296
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@max=\dimen284
-\pgf@sys@shading@range@num=\count330
-\pgf@shadingcount=\count331
+\pgf@max=\dimen297
+\pgf@sys@shading@range@num=\count334
+\pgf@shadingcount=\count335
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
@@ -1024,8 +1044,8 @@ File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@nodesepstart=\dimen285
-\pgf@nodesepend=\dimen286
+\pgf@nodesepstart=\dimen298
+\pgf@nodesepend=\dimen299
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -1039,8 +1059,8 @@ Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
 Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen287
-\pgffor@skip=\dimen288
+\pgffor@iter=\dimen300
+\pgffor@skip=\dimen301
 \pgffor@stack=\toks41
 \pgffor@toks=\toks42
 ))
@@ -1050,33 +1070,33 @@ Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@plot@mark@count=\count332
-\pgfplotmarksize=\dimen289
+\pgf@plot@mark@count=\count336
+\pgfplotmarksize=\dimen302
 )
-\tikz@lastx=\dimen290
-\tikz@lasty=\dimen291
-\tikz@lastxsaved=\dimen292
-\tikz@lastysaved=\dimen293
-\tikz@lastmovetox=\dimen294
-\tikz@lastmovetoy=\dimen295
-\tikzleveldistance=\dimen296
-\tikzsiblingdistance=\dimen297
+\tikz@lastx=\dimen303
+\tikz@lasty=\dimen304
+\tikz@lastxsaved=\dimen305
+\tikz@lastysaved=\dimen306
+\tikz@lastmovetox=\dimen307
+\tikz@lastmovetoy=\dimen308
+\tikzleveldistance=\dimen309
+\tikzsiblingdistance=\dimen310
 \tikz@figbox=\box77
 \tikz@figbox@bg=\box78
 \tikz@tempbox=\box79
 \tikz@tempbox@bg=\box80
-\tikztreelevel=\count333
-\tikznumberofchildren=\count334
-\tikznumberofcurrentchild=\count335
-\tikz@fig@count=\count336
+\tikztreelevel=\count337
+\tikznumberofchildren=\count338
+\tikznumberofcurrentchild=\count339
+\tikz@fig@count=\count340
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfmatrixcurrentrow=\count337
-\pgfmatrixcurrentcolumn=\count338
-\pgf@matrix@numberofcolumns=\count339
+\pgfmatrixcurrentrow=\count341
+\pgfmatrixcurrentcolumn=\count342
+\pgf@matrix@numberofcolumns=\count343
 )
-\tikz@expandcount=\count340
+\tikz@expandcount=\count344
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -1099,26 +1119,26 @@ File: tikzlibraryfadings.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 File: pgflibraryfadings.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ))) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count341
-\calc@Bcount=\count342
-\calc@Adimen=\dimen298
-\calc@Bdimen=\dimen299
+\calc@Acount=\count345
+\calc@Bcount=\count346
+\calc@Adimen=\dimen311
+\calc@Bdimen=\dimen312
 \calc@Askip=\skip99
 \calc@Bskip=\skip100
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count343
+\calc@Ccount=\count347
 \calc@Cskip=\skip101
 )
-\c@@todonotes@numberoftodonotes=\count344
+\c@@todonotes@numberoftodonotes=\count348
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen300
-\WF@size=\dimen301
-\c@WF@wrappedlines=\count345
+\wrapoverhang=\dimen313
+\WF@size=\dimen314
+\c@WF@wrappedlines=\count349
 \WF@box=\box81
 \WF@everypar=\toks43
 Package: wrapfig 2003/01/31  v 3.6
@@ -1128,21 +1148,21 @@ Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen302
-\captionmargin@=\dimen303
-\captionwidth=\dimen304
-\caption@tempdima=\dimen305
-\caption@indent=\dimen306
-\caption@parindent=\dimen307
-\caption@hangindent=\dimen308
+\captionmargin=\dimen315
+\captionmargin@=\dimen316
+\captionwidth=\dimen317
+\caption@tempdima=\dimen318
+\caption@indent=\dimen319
+\caption@parindent=\dimen320
+\caption@hangindent=\dimen321
 Package caption Info: KOMA-Script document class detected.
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption-koma.sto
 File: caption-koma.sto 2020/09/21 v2.0b Adaption of the caption package to the 
 KOMA-Script document classes (AR)
 ))
-\c@caption@flags=\count346
-\c@continuedfloat=\count347
+\c@caption@flags=\count350
+\c@continuedfloat=\count351
 Package caption Info: floatflt package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -1155,11 +1175,11 @@ Package caption Info: wrapfig package is loaded.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/sidecap/sidecap.sty
 Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
-\SC@BOXWD=\dimen309
-\SC@CAPWD=\dimen310
-\SC@tempdima=\dimen311
-\SC@tempdimb=\dimen312
-\c@SC@C=\count348
+\SC@BOXWD=\dimen322
+\SC@CAPWD=\dimen323
+\SC@tempdima=\dimen324
+\SC@tempdimb=\dimen325
+\c@SC@C=\count352
 \SC@BOX=\box82
 )
 (/usr/share/texlive/texmf-dist/tex/latex/capt-of/capt-of.sty
@@ -1186,13 +1206,13 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@buffer=\toks47
 \SOUL@token=\toks48
 \SOUL@spaceskip=\skip102
-\SOUL@ttwidth=\dimen313
-\SOUL@uldp=\dimen314
-\SOUL@ulht=\dimen315
+\SOUL@ttwidth=\dimen326
+\SOUL@uldp=\dimen327
+\SOUL@ulht=\dimen328
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count349
+\c@r@tfl@t=\count353
 \rotFPtop=\skip103
 \rotFPbot=\skip104
 \rot@float@box=\box83
@@ -1257,16 +1277,16 @@ LaTeX Font Info:    ... okay on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count350
-\scratchdimen=\dimen316
+\scratchcounter=\count354
+\scratchdimen=\dimen329
 \scratchbox=\box84
-\nofMPsegments=\count351
-\nofMParguments=\count352
+\nofMPsegments=\count355
+\nofMParguments=\count356
 \everyMPshowfont=\toks50
-\MPscratchCnt=\count353
-\MPscratchDim=\dimen317
-\MPnumerator=\count354
-\makeMPintoPDFobject=\count355
+\MPscratchCnt=\count357
+\MPscratchDim=\dimen330
+\MPnumerator=\count358
+\makeMPintoPDFobject=\count359
 \everyMPtoPDFconversion=\toks51
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1322,7 +1342,7 @@ Dictionary: translator-basic-dictionary, Language: English
 -German.dict
 Dictionary: translator-basic-dictionary, Language: German 
 )
-\c@lstlisting=\count356
+\c@lstlisting=\count360
 Package hyperref Info: Link coloring ON on input line 30.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1333,7 +1353,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count357
+\c@section@level=\count361
 )
 LaTeX Info: Redefining \ref on input line 30.
 LaTeX Info: Redefining \pageref on input line 30.
@@ -1357,7 +1377,7 @@ Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count358
+\BKM@id=\count362
 ))
 Package backref Info: ** backref set up for natbib ** on input line 30.
 
@@ -1611,7 +1631,7 @@ chapter 1.
 ]) [2] (./content/Technische_Grundlagen.tex
 chapter 2.
 ) (./content/Technische_Ausgangssituation.tex
-<./images/can_bus_system.jpeg, id=188, 801.29362pt x 409.68056pt>
+<./images/can_bus_system.jpeg, id=206, 801.29362pt x 409.68056pt>
 File: ./images/can_bus_system.jpeg Graphic file (type jpg)
 <use ./images/can_bus_system.jpeg>
 Package pdftex.def Info: ./images/can_bus_system.jpeg  used on input line 6.
@@ -1630,13 +1650,13 @@ Overfull \hbox (15.75343pt too wide) in paragraph at lines 36--37
 e-Übertragungen
  []
 
-<./images/CAN-data-frame.jpg, id=201, 635.37375pt x 382.42876pt>
+<./images/CAN-data-frame.jpg, id=219, 635.37375pt x 382.42876pt>
 File: ./images/CAN-data-frame.jpg Graphic file (type jpg)
 <use ./images/CAN-data-frame.jpg>
 Package pdftex.def Info: ./images/CAN-data-frame.jpg  used on input line 43.
 (pdftex.def)             Requested size: 398.3386pt x 239.7643pt.
 [5 <./images/CAN-data-frame.jpg>]
-<./images/CAN-remote-frame.jpg, id=213, 632.3625pt x 396.48125pt>
+<./images/CAN-remote-frame.jpg, id=231, 632.3625pt x 396.48125pt>
 File: ./images/CAN-remote-frame.jpg Graphic file (type jpg)
 <use ./images/CAN-remote-frame.jpg>
 Package pdftex.def Info: ./images/CAN-remote-frame.jpg  used on input line 73.
@@ -1646,24 +1666,24 @@ Package pdftex.def Info: ./images/CAN-remote-frame.jpg  used on input line 73.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6]
-<./images/Can-error-frame.jpg, id=224, 627.34375pt x 214.8025pt>
+<./images/Can-error-frame.jpg, id=242, 627.34375pt x 214.8025pt>
 File: ./images/Can-error-frame.jpg Graphic file (type jpg)
 <use ./images/Can-error-frame.jpg>
 Package pdftex.def Info: ./images/Can-error-frame.jpg  used on input line 92.
 (pdftex.def)             Requested size: 398.3386pt x 136.39479pt.
-<./images/Can-overload-frame.jpg, id=230, 615.29875pt x 249.93375pt>
+<./images/Can-overload-frame.jpg, id=248, 615.29875pt x 249.93375pt>
 File: ./images/Can-overload-frame.jpg Graphic file (type jpg)
 <use ./images/Can-overload-frame.jpg>
 Package pdftex.def Info: ./images/Can-overload-frame.jpg  used on input line 10
 5.
 (pdftex.def)             Requested size: 398.3386pt x 161.80669pt.
  [7 <./images/Can-remote-frame.jpg> <./images/Can-error-frame.jpg>]
-<./images/Can-connexion.jpg, id=241, 669.50125pt x 391.4625pt>
+<./images/Can-connexion.jpg, id=259, 669.50125pt x 391.4625pt>
 File: ./images/Can-connexion.jpg Graphic file (type jpg)
 <use ./images/Can-connexion.jpg>
 Package pdftex.def Info: ./images/Can-connexion.jpg  used on input line 133.
 (pdftex.def)             Requested size: 398.3386pt x 232.92009pt.
-<./images/can-high-low.jpg, id=248, 681.54625pt x 443.6575pt>
+<./images/can-high-low.jpg, id=266, 681.54625pt x 443.6575pt>
 File: ./images/can-high-low.jpg Graphic file (type jpg)
 <use ./images/can-high-low.jpg>
 Package pdftex.def Info: ./images/can-high-low.jpg  used on input line 144.
@@ -1671,14 +1691,14 @@ Package pdftex.def Info: ./images/can-high-low.jpg  used on input line 144.
 )
 (./content/SPI_Schnitstelle.tex [8 <./images/Can-overload-frame.jpg> <./images/
 Can-connexion.jpg>] [9 <./images/can-high-low.jpg>]
-<./images/spi-bus.jpg, id=267, 405.515pt x 452.69125pt>
+<./images/spi-bus.jpg, id=285, 405.515pt x 452.69125pt>
 File: ./images/spi-bus.jpg Graphic file (type jpg)
 <use ./images/spi-bus.jpg>
 Package pdftex.def Info: ./images/spi-bus.jpg  used on input line 10.
 (pdftex.def)             Requested size: 318.67209pt x 355.75714pt.
  [10 <./images/spi-bus.jpg>]) (./content/Embedded_Linux.tex [11]) (./content/Ko
 mponente_Embedded_Linux.tex
-<./images/boot-flow.jpg, id=289, 610.28pt x 245.91875pt>
+<./images/boot-flow.jpg, id=307, 610.28pt x 245.91875pt>
 File: ./images/boot-flow.jpg Graphic file (type jpg)
 <use ./images/boot-flow.jpg>
 Package pdftex.def Info: ./images/boot-flow.jpg  used on input line 15.
@@ -1703,7 +1723,7 @@ Overfull \hbox (19.92776pt too wide) in paragraph at lines 3--5
 t Pe-ta-Li-nux mit den Hardware-
  []
 
-<./images/petalinux-toolflow.jpg, id=309, 1024.82875pt x 586.19pt>
+<./images/petalinux-toolflow.jpg, id=327, 1024.82875pt x 586.19pt>
 File: ./images/petalinux-toolflow.jpg Graphic file (type jpg)
 <use ./images/petalinux-toolflow.jpg>
 Package pdftex.def Info: ./images/petalinux-toolflow.jpg  used on input line 8.
@@ -1743,7 +1763,7 @@ Overfull \hbox (23.64008pt too wide) in paragraph at lines 78--79
 tei-for-mat(BIN, MCS, DOW-N-LOAD.BIT) 
  []
 
-<./images/petalinux-projektstruktur.jpg, id=344, 384.43625pt x 306.14375pt>
+<./images/petalinux-projektstruktur.jpg, id=362, 384.43625pt x 306.14375pt>
 File: ./images/petalinux-projektstruktur.jpg Graphic file (type jpg)
 <use ./images/petalinux-projektstruktur.jpg>
 Package pdftex.def Info: ./images/petalinux-projektstruktur.jpg  used on input 
@@ -1758,42 +1778,127 @@ el-len, den Gerätebaum(Device-
 [17 <./images/petalinux-projektstruktur.jpg>]) [18]
 (./content/Versuch_Aufbau.tex
 chapter 3.
-) (./content/Allgemein_Projekt.tex) (./content/Hardware_Platform.tex)
-(./content/Konfigurieren_System.tex) [19
+) (./content/Allgemein_Projekt.tex [19
 
 
-] (./content/Fazit_Ausblick.tex
+]
+<./images/Zynqmp_and_mcp.jpg, id=383, 4047.12pt x 3035.34pt>
+File: ./images/Zynqmp_and_mcp.jpg Graphic file (type jpg)
+<use ./images/Zynqmp_and_mcp.jpg>
+Package pdftex.def Info: ./images/Zynqmp_and_mcp.jpg  used on input line 24.
+(pdftex.def)             Requested size: 398.3386pt x 298.73497pt.
+) (./content/Hardware_Platform.tex
+[20 <./images/Zynqmp_and_mcp.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 23--25
+
+ []
+
+[21]
+<./images/ps-pl.jpg, id=396, 640.3925pt x 331.2375pt>
+File: ./images/ps-pl.jpg Graphic file (type jpg)
+<use ./images/ps-pl.jpg>
+Package pdftex.def Info: ./images/ps-pl.jpg  used on input line 30.
+(pdftex.def)             Requested size: 398.3386pt x 206.03734pt.
+
+Overfull \hbox (3.70764pt too wide) in paragraph at lines 39--40
+[]\T1/lmr/m/n/10.95 Die Ab-bil-dung  [][]3.2[][] zeigt die Tren-nung zwi-schen 
+dem fes-ten Logik-Hardware-Prozessor
+ []
+
+<./images/zynqmp-blockdiagramm.jpg, id=404, 1087.06125pt x 725.71124pt>
+File: ./images/zynqmp-blockdiagramm.jpg Graphic file (type jpg)
+<use ./images/zynqmp-blockdiagramm.jpg>
+Package pdftex.def Info: ./images/zynqmp-blockdiagramm.jpg  used on input line 
+46.
+(pdftex.def)             Requested size: 398.3386pt x 265.92883pt.
+[22 <./images/ps-pl.jpg>] [23 <./images/zynqmp-blockdiagramm.jpg>]
+Overfull \hbox (24.33081pt too wide) in paragraph at lines 75--76
+[]\T1/lmr/m/n/10.95 Der PS un-ter-stützt auch vie-le Eingangs-/Ausgangsschnitts
+tellen wie SRAM-Schnittstellen
+ []
+
+<./images/top-level_zynqmp.jpg, id=422, 514.92375pt x 624.3325pt>
+File: ./images/top-level_zynqmp.jpg Graphic file (type jpg)
+<use ./images/top-level_zynqmp.jpg>
+Package pdftex.def Info: ./images/top-level_zynqmp.jpg  used on input line 79.
+(pdftex.def)             Requested size: 398.3386pt x 482.98578pt.
+[24 <./images/top-level_zynqmp.jpg>]
+<./images/apu.jpg, id=434, 729.72626pt x 545.03625pt>
+File: ./images/apu.jpg Graphic file (type jpg)
+<use ./images/apu.jpg>
+Package pdftex.def Info: ./images/apu.jpg  used on input line 102.
+(pdftex.def)             Requested size: 398.3386pt x 297.51707pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
+[]|\T1/lmr/bx/n/10.95 Video-Code-Einheit
+ []
+
+[26 <./images/apu.jpg>]) (./content/Konfigurieren_System.tex) [27]
+(./content/Fazit_Ausblick.tex
 chapter 4.
 ) (./thesis.bbl (./thesis.brf)
 \tf@brf=\write10
 \openout10 = `thesis.brf'.
 
- [20
+ [28
 
 
 ]
 chapter without number
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--49
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\T1/lmr/m/sc/10.95 CNX Soft-wa-re\T1/lmr/m/n/10.95 :  \T1/lmr/m/it/10.95 CNX-So
+ft. Xi-linx In-tro-du-ces Zynq Ul-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\T1/lmr/m/it/10.95 tra-S-ca-le+ MP-SoC with Cor-tex A53 and R5 Co-res, Ul-tra-s
+-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\T1/lmr/m/it/10.95 ca-le FPGA\T1/lmr/m/n/10.95 .  [][]$\T1/lmtt/m/n/10.95 https
+ : / / www . cnx-[]software . com / 2015 / 03 / 05 /
+ []
+
+
+Overfull \hbox (92.72574pt too wide) in paragraph at lines 27--27
+\T1/lmtt/m/n/10.95 xilinx-[]introduces-[]zynq-[]ultrascale-[]mpsoc-[]with-[]cor
+tex-[]a53-[]r5-[]cores-[]ultrascale-[]fpga/$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
 \T1/lmtt/m/n/10.95 manuals / xilinx2019 _ 1 / ug1144-[]petalinux-[]tools-[]refe
 rence-[]guide . pdf$[][]
  []
 
+[29
 
-Underfull \hbox (badness 4673) in paragraph at lines 67--67
+]
+Underfull \hbox (badness 4673) in paragraph at lines 84--84
 \T1/lmr/m/sc/10.95 UG1137\T1/lmr/m/n/10.95 :  Zynq Ul-tra-S-ca-le.  In: \T1/lmr
 /m/it/10.95 User gui-de \T1/lmr/m/n/10.95 1137 (2017), 1--268.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
 [][]$\T1/lmtt/m/n/10.95 https : / / www . xilinx . com / support / documentatio
 n / user _ guides /
  []
 
-) [21
-
-]
+) [30]
 \openout2 = `content/jurat.aux'.
 
  (./content/jurat.tex
@@ -1801,7 +1906,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-) [22
+) [31
 
 ]
 
@@ -1946,6 +2051,7 @@ ragged2e.sty    2019/07/28 v2.2 ragged2e Package (MS)
 everysel.sty    2021/01/20 v2.1 EverySelectfont Package (MS)
 everysel-2011-10-28.sty
   lscape.sty    2020/05/28 v3.02 Landscape Pages (DPC)
+booktabs.sty    2020/01/12 v1.61803398 Publication quality tables
 paralist.sty    2017/01/22 v2.7 Extended list environments
 todonotes.sty    2018/11/22
     tikz.sty    2020/12/27 v3.1.8b (3.1.8b)
@@ -2043,7 +2149,12 @@ lstlang1.sty    2020/03/24 1.8d listings language file
 ./images/petalinux-projektstruktur.jpg
 content/Versuch_Aufbau.tex
 content/Allgemein_Projekt.tex
+./images/Zynqmp_and_mcp.jpg
 content/Hardware_Platform.tex
+./images/ps-pl.jpg
+./images/zynqmp-blockdiagramm.jpg
+./images/top-level_zynqmp.jpg
+./images/apu.jpg
 content/Konfigurieren_System.tex
 content/Fazit_Ausblick.tex
   thesis.bbl
@@ -2055,16 +2166,16 @@ appendix/Datentraeger.tex
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 0E52127473D801D40D8735B3D6CD4EC1;834.
+(rerunfilecheck)             Checksum: C45A52E80548D0C9FEE47BF45EC49569;1221.
  ) 
 Here is how much of TeX's memory you used:
- 31149 strings out of 479304
- 632641 string characters out of 5869778
- 1398354 words of memory out of 5000000
- 47456 multiletter control sequences out of 15000+600000
+ 31302 strings out of 479304
+ 635309 string characters out of 5869778
+ 1400841 words of memory out of 5000000
+ 47577 multiletter control sequences out of 15000+600000
  497766 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,19n,120p,10626b,1368s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,20n,120p,10626b,1368s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/te
 xlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/publ
@@ -2077,10 +2188,10 @@ ype1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type
 1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on thesis.pdf (31 pages, 962205 bytes).
+Output written on thesis.pdf (40 pages, 6119394 bytes).
 PDF statistics:
- 594 PDF objects out of 1000 (max. 8388607)
- 482 compressed objects within 5 object streams
- 98 named destinations out of 1000 (max. 500000)
- 462 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 726 PDF objects out of 1000 (max. 8388607)
+ 587 compressed objects within 6 object streams
+ 121 named destinations out of 1000 (max. 500000)
+ 519 words of extra memory for PDF output out of 10000 (max. 10000000)
 

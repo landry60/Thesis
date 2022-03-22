@@ -14,6 +14,11 @@
 \contentsline {figure}{\numberline {2.10}{\ignorespaces PetaLinux-Werkzeugfluss}}{14}{figure.caption.18}%
 \contentsline {figure}{\numberline {2.11}{\ignorespaces petalinux Projektstruktur}}{17}{figure.caption.19}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Versuchsaufbau ZynqMP Ultralcale + mcp251xfd}}{20}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Hard-(ARM Cortex-A9/Cortex-A53) und Soft-Prozessoren (MicroBlaze)}}{22}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Zynq UltraScale+ MPSoC EV Block Diagram}}{23}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Zynq UltraScale+ MPSoC Top-Level Blockdiagramm}}{24}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Detailliertes APU-Blockdiagramm}}{26}{figure.caption.24}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
