@@ -18,3 +18,6 @@
 \nomenclatureentry{aPL@[{PL}]\begingroup Programmable Logic\nomeqref {0.0}|nompageref}{V}
 \nomenclatureentry{aFPU@[{FPU}]\begingroup Floating Point Unit\nomeqref {0.0}|nompageref}{V}
 \nomenclatureentry{aDMA@[{DMA}]\begingroup Direct Memory Access\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aPLL@[{PLL}]\begingroup Phase Locked Loops\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aDRAM@[{DRAM}]\begingroup Dynamic Random Access Memory\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aATF@[{ATF}]\begingroup ARM Trusted Firmware\nomeqref {0.0}|nompageref}{V}

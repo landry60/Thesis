@@ -17,26 +17,36 @@
 \contentsline {subsubsection}{\numberline {2.2.1.4}Overload Frame}{8}{subsubsection.2.2.1.4}%
 \contentsline {subsection}{\numberline {2.2.2}Can Physical Layer}{8}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}SPI Interface}{9}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Embedded Linux}{11}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Komponente eines Embedded Linux Systems}{12}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Petalinux Tool Flow}{14}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Petalinux Installation}{15}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Wichtige Petalinux Kommando}{15}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Petalinux Projekt Strukture}{17}{subsection.2.6.3}%
-\contentsline {chapter}{\numberline {3}Umsetzung}{19}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Allgemein über das Projekt}{19}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Hardware Platform}{21}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}ZynqMP UltraScale + MPSoC ZCU106 Evaluation Board}{21}{subsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.1.1}Ultrasale + MPSoC Architektur}{21}{subsubsection.3.2.1.1}%
-\contentsline {subsubsection}{\numberline {3.2.1.2}Allgemeine Ansicht des Zynq Ultrasale+ MPSoC}{23}{subsubsection.3.2.1.2}%
-\contentsline {subsubsection}{\numberline {3.2.1.3}Processing System (PS)}{25}{subsubsection.3.2.1.3}%
-\contentsline {subsubsection}{\numberline {3.2.1.4}Programmable Logik (PL)}{26}{subsubsection.3.2.1.4}%
-\contentsline {subsection}{\numberline {3.2.2}MCP251XFD CAN Controller}{27}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Konfiguration und Bauen des Systems}{27}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Fazit und Ausblick}{28}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Fazit}{28}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Ausblick}{28}{section.4.2}%
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{29}{chapter*.26}%
+\contentsline {section}{\numberline {2.4}Embedded Linux für Xilinx ZynqMP Ultrascale+MPSoC}{11}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Komponente des Embedded Linux Betriebssystems für ARM Prozessoren}{12}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Der Bootloader}{12}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Device-tree}{13}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Der Linux Kernel}{14}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Das Linux Root files System (Rootfs)}{15}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}Der Init Prozess}{15}{subsection.2.5.5}%
+\contentsline {subsection}{\numberline {2.5.6}Der Zynq UltraScale+MPSoC Boot-Prozess}{16}{subsection.2.5.6}%
+\contentsline {subsubsection}{\numberline {2.5.6.1}Die Boot-Setup-Phase}{16}{subsubsection.2.5.6.1}%
+\contentsline {subsubsection}{\numberline {2.5.6.2}Die Bootloader-Phase}{17}{subsubsection.2.5.6.2}%
+\contentsline {section}{\numberline {2.6}Petalinux Tool Flow}{19}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Petalinux Installation}{20}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Wichtige Petalinux Kommando}{20}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Petalinux Projekt Strukture}{22}{subsection.2.6.3}%
+\contentsline {chapter}{\numberline {3}Umsetzung}{24}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Allgemein über das Projekt}{24}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Hardware Platform}{26}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Xilinx ZCU106 Evaluation Board}{26}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}Ultrasale + MPSoC Architektur}{27}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.2}Allgemeine Ansicht des Zynq Ultrasale+ MPSoC}{27}{subsubsection.3.2.1.2}%
+\contentsline {subsubsection}{\numberline {3.2.1.3}Processing System (PS)}{30}{subsubsection.3.2.1.3}%
+\contentsline {subsubsection}{\numberline {3.2.1.4}Programmable Logik (PL)}{30}{subsubsection.3.2.1.4}%
+\contentsline {subsection}{\numberline {3.2.2}MCP251XFD CAN Controller + Transceiver}{31}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}CAN FD Controller Modul}{32}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}TLE6251 CAN Transceiver}{33}{subsubsection.3.2.2.2}%
+\contentsline {section}{\numberline {3.3}Konfiguration und Bauen des Systems}{33}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Fazit und Ausblick}{38}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Fazit}{38}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Ausblick}{38}{section.4.2}%
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{39}{chapter*.31}%
 \contentsline {chapter}{\numberline {A}Anhang}{a}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Inhalt des Datenträgers}{a}{section.A.1}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

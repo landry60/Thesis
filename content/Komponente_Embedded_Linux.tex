@@ -1,14 +1,101 @@
-\section{Komponente eines Embedded Linux Systems}
+\section{Komponente des Embedded Linux Betriebssystems für ARM Prozessoren}
 \label{cha:tech_grund:sec:Komponente_eines_Emb_Lin_Sys}
-In diesem Abschnitt möchte ich auf die wesentlichen Komponenten von eingebetteten Linux-Systemen im Detail eingehen. Im Anschluss daran wird der typische Boot-Prozess solcher Systeme beschrieben 
-Fast Jedes embedded Linux Projekt beginnt mit der Erstellung, Konfiguration und Kompilierung der folgenden vier Komponenten \cite{Dervis2013}:
+In diesem Abschnitt möchte ich auf die wesentlichen Komponenten von eingebetteten Linux-Betriebssystems im Detail eingehen. Im Anschluss daran wird der typische Boot-Prozess solcher Systeme beschrieben.
+Ein auf Linux basierendes Betriebssystem wird in Form einer Linux-Distribution angeboten. Es handelt sich dabei um eine Sammlung von Softwarepaketen, Bibliotheken und Dienstprogrammen zusammen mit einer eigenen Linux-Kernel-Variante, die für eine bestimmte Prozessorarchitektur angepasst oder verändert wird. 
+Zum Booten eines Linux-Betriebssystems auf einem ARM-Prozessor werden die folgenden Komponenten benötigt:
+
 \begin{itemize}
-	\item \textbf{Toolchain}: Die Toolchain enthält den Compiler und andere zur Erstellung von Code für Ihr Endgerät notwendige Werkzeuge
-	\item \textbf{der Bootloader}: Beim Einschalten des Rechners, auf denen Linux als Betriebssystem installiert ist, wird nach der ersten Einrichtung ein Bootloader in den Speicher geladen und der Code ausgeführt. Die Hauptaufgabe des Bootloaders ist es, der Linux Kernel in den Speicher zu laden und dann es auszuführen. 
-	\item \textbf{Der Kernel}: ist das Herzstück des Systems, das die Systemressourcen und Schnittstelle zur Hardware verwaltet.
+	\item \textbf{der Bootloader} 
+	\item \textbf{Der Gerätebaum(Device-tree)}:
+	\item \textbf{Der Linux Kernel}
 	\item \textbf{Root filesystem}: beinhaltet die Bibliotheken und Programme, die ausgeführt werden, sobald der Kernel seine Initialisierung abgeschlossen hat.
+	\item \textbf{Der \grqq Init\grqq\ Prozess}:
 \end{itemize}
-Als Nächstes möchte ich den Boot-Prozess bei Systemen, die auf Zynq UltraScale+ MPSoCs basieren, erläutern, da dies genau die Plattform ist, die wir für unsere Arbeit verwenden werden. Die Abbildung ~\ref{fig:boot:process} zeit ein Beispiel für den Bootablauf an.
+
+\subsection{Der Bootloader}
+\cite{Dervis2013}Der Bootloader ist die Software, die beim Einschalten des Systems ausgeführt wird und für das Laden eines Betriebssystems für die Hardware verantwortlich ist. Beim Einschalten des Rechners, auf denen Linux als Betriebssystem installiert ist, wird nach der ersten Einrichtung der Bootloader, der für die Initialisierung der Hardware-Peripherie und das Laden des Bitstreams im FPGA verantwortlich ist, in den Speicher geladen und der Code ausgeführt.\\
+Der Bootloader muss zunächst von der Festplatte in den Prozessorspeicher geladen werden, bevor er ausgeführt werden kann. Beim Zynq UltraScale+MPSoC wird UBoot zum Laden des Linux-Kernels verwendet, und die Bootload-Phase ist hier in zwei Stufen unterteilt: die FSBL-Phase und die U-Boot-Phase
+
+\subsection{Device-tree}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=1.1\textwidth]{./images/device-tree.jpg}
+	\end{center}
+	\vspace{-5pt}
+	\caption[ZCU106-Gerätbaum gpio-keys and leds]{Ein Screenshot des ZCU106-Gerätebaums, der den Inhalt des gpio-keys und leds  auf dem Board zeigt} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
+	\label{fig:device:tree}
+	\vspace{-5pt}
+\end{figure}	
+Die Abbildung ~\ref{fig:device:tree} zeigt Informationen zu den Schalter- und led-Knoten im Device Tree des Xilinx ZCU106 Boards. Hier wird z.B. angegeben, an welchem gpio-Pin der Schalter SW9 auf der Platine angeschlossen ist.\\
+\cite{Dervis2013}Der Linux-Kernel benötigt Informationen über den Prozessor, auf dem er ausgeführt wird, die Peripheriegeräte, mit denen der Prozessor verbunden ist, ihre Schnittstellen zum Prozessor und ihre physikalischen Adressen. Der Kernel muss zur Initialisierung der Treiber und der mit diesen Peripheriegeräten verbundenen Dienste auch überprüfen, dass die Funktionen, die in seiner Konfiguration aktiviert wurden, tatsächlich von der Hardware unterstützt werden, die er steuert. Dabei kann es sich um Informationen über die Taktgeber und Register der Hardware oder über die mit der Hardware verbundenen Peripheriegeräte wie den externen Speicher, SPI handeln.\\
+
+Der Zynq UltraScale+MPSoC verwendet daher den Device-Tree, um die Geräte- und Peripherie-Informationen wie physikalische Geräteadressen, E/A-Registeradressen, Speicheradressraum und Interrupt-Informationen während des Bootvorgangs an den Kernel weiterzugeben.\\
+Der Gerätebaum wird im Textformat in einer Datei mit der Erweiterung \ ".dts"\ dargestellt. Hierbei handelt es sich um eine Quelltextdatei, die Informationen über Geräte und Verbindungsbusse beschreibt, die mit einer Computer-Hardware verbunden sind. Sie ist in Form von \ "Knoten"\ organisiert, deren Stammverzeichnis durch \grqq /\grqq\ dargestellt wird, genau wie im Linux-Stammdateisystem. Jeder Knoten hat einen Namen, der ein mit dem Prozessor verbundenes Gerät oder einen Bus darstellt, und der Knoten besteht aus Eigenschaften. Jeder übergeordnete Knoten für ein bestimmtes Peripheriegerät oder einen Bus kann \ "Kind"\ -Knoten für Geräte enthalten, die mit diesem Peripheriegerät oder Bus verbunden sind. Die Werte der Eigenschaften können Zeichenketten oder Listen von Zeichenketten sein, oder sie können leer sein, wenn das Vorhandensein oder Nichtvorhandensein des Wertes eine boolesche Logik an den Kernel übermittelt. Die Device-Tree-Quelldatei wird mit Hilfe des \ "dtc -Compilers"\ zu einem Device-Tree-Blob (.dtb) kompiliert.
+
+\subsection{Der Linux Kernel}
+Das ist das Herzstück des Systems, das die Systemressourcen und Schnittstelle zur Hardware verwaltet. Die Hauptfunktionen des Linux-Kernels sind die folgenden~\cite{linuxkernel.}:
+\begin{itemize}
+	\item Planung von Prozessen und Einrichten einer Umgebung für ihre Ausführung.
+	\item  Zuteilung von Speicher an einen Prozess und Schutz des von einem Prozess verwendeten Speichers vor anderen Prozessen.
+	\item \ Verwaltung der Kommunikation zwischen den Prozessen, um eine effiziente Ausführung der Prozesse zu gewährleisten
+	\item Sicherstellung der Integrität des Systems, wenn das Computersystem mehrere Benutzer hat, die berechtigt sind, Änderungen am Root-Dateisystem und an Softwarepaketen vorzunehmen.	
+	\item Verwalten der Computerressourcen und des Zugriffs auf diese Ressourcen
+\end{itemize}
+
+Nachdem der Bootloader den Gerätebaum und den Kernel in den DRAM des Prozessors geladen hat, teilt er dem Kernel die Adresse des Gerätebaums mit, bevor der Kernel mit der Ausführung beginnt. Der Kernel prüft dann der Reihe nach alle Hardware-Peripheriegeräte, Clock-Generator und Speicher, die vom FSBL initialisiert wurden, und aktiviert dann alle mit der zugrunde liegenden Hardware verbundenen Dienste und Funktionen, die in der Kernelkonfiguration aktiviert wurden. Sobald der Kernel mit diesen Aufgaben fertig ist, hängt er das Root-Dateisystem ein und führt den "init"-Prozess aus, der es dem Benutzer ermöglicht, in den Benutzerraum einzutreten.
+
+\subsection{Das Linux Root files System (Rootfs)}
+
+Das Linux-Root-Dateisystem [\cite{Dervis2013}] enthält alle binären ausführbaren Dateien, Geräteinformationen, Prozessprotokolle, Softwarepakete und Bibliotheken, die vom Benutzer in seinem Benutzerbereich benötigt werden, um das Linux-Betriebssystem effizient zu nutzen. Das Dateisystem auf der Festplatte ist in Verzeichnissen organisiert. Das Root-Dateisystem wird in das Verzeichnis\grqq /\grqq\ des Dateisystems eingehängt, welches die Spitze der Hierarchie des Root-Dateisystems markiert.
+
+\subsection{Der Init Prozess}
+
+Der "init"-Prozess [\cite{Dervis2013}] wird als erster Prozess im Benutzerbereich vom Kernel initiiert und ist für die Initialisierung der Systemverwaltungsdienste zuständig, bevor die Benutzer sich anmelden können. Alle Software-Dienste, die im Root-Dateisystem installiert und im Benutzerraum aktiviert wurden, werden vom "init"-Prozess ausgeführt, bevor sich die Benutzer sich am System anmelden
+
+Als Nächstes wird den Boot-Prozess bei Systemen, die auf Zynq UltraScale+ MPSoCs basiert sind, erläutert, da dies genau die Plattform ist, die wir für unsere Arbeit verwenden werden.
+
+\subsection{Der Zynq UltraScale+MPSoC Boot-Prozess}
+
+Zum Booten von Linux auf dem Zynq UltraScale+MPSoC muss das Boot-Image (BOOT.BIN) auf dem Boot-Medium entsprechend dem vom Benutzer gewählten Boot-Modus vorhanden sein [\cite{Xilinx2017}[p.~14]]. Das ZCU106 Board unterstützt das Booten über JTAG, Quad-SPI Flash, SD Card und NAND Flash Drive. In dieser Arbeit booten wir Linux von der SD-Karte[\cite{Xilinx2020}[p.~61]], daher muss die Datei BOOT.BIN auf der FAT32-Partition der SD-Karte vorhanden sein. Die BOOT.BIN-Datei wurde so konfiguriert, dass sie die Platform Management Unit Firmware (PMUFW), die FSBL und die ausführbaren U-Boot-Dateien beinhaltet, welche die empfohlene Konfiguration für den Zynq UltraScale+ ist. Die BOOT.BIN enthält in dieser Arbeit auch den FPGA-Bitstream zur Programmierung der programmierbaren Logik (PL). Für ein vollständiges Booten über eine SD-Karte sollten das Kernel-Image (Image) und der Device-Tree-Blob ("Projektname.dtb") ebenfalls auf der FAT32-Partition vorhanden sein. Das Root-Dateisystem muss auf der EXT4-Partition der SD-Karte vorhanden sein.\\
+Der Bootvorgang von Linux auf dem Xilinx Zynq UltraScale+ lässt sich in vier Phasen unterteilen
+
+\begin{itemize}
+	\item Die Boot-Setup-Phase
+	\item Die Bootloader-Phase
+	\item Die Kernel-Boot-Phase
+	\item und Die \grqq init\grqq-Phase
+\end{itemize}
+
+\subsubsection{Die Boot-Setup-Phase}
+
+Die Platform Management Unit (PMU) und die Configuration Security Unit (CSU) sind für das Einrichten des Zynq UltraScale+ MPSoC verantwortlich, bevor Linux auf dem PS gebootet werden kann . Die Boot-Setup-Phase besteht aus drei Phasen, die wie folgt unterteilt werden können[\cite{XilinxInc.2019}[p.~27]]:
+\begin{itemize}
+	\item \textbf{Pre-configuration stage (Oder Vor-Konfigurationsphase)}: Dieser Phase wird von der PMU angesteuert, die den PMU-ROM-Code(PBR). Nachdem der PBR-Code ausgeführt wurde, übergibt er die Systemkontrolle an die Configuration Security Unit (CSU). Die wichtigsten Schritte der Vor-Konfigurationsphase sind im Folgenden aufgeführt[\cite{XilinxInc.2019}[p.~57]]:
+	\begin{itemize}
+		\item Initialisieren des Systemmonitors
+		\item Initialisierung der Phase Locked Loops (PLL) für Takte
+		\item Leeren des PMU-RAMs.
+		\item Initialisieren Sie des Dynamic Random Access Memory (DRAM).
+		\item Freigabe der CSU oder Eintritt in den Fehlerzustand.
+	\end{itemize}
+	\item \textbf{Configuration stage oder (Konfiguration der Phase)}:Diese Phase übernimmt das Laden des First-Stage-Bootloader-Codes (FSBL) für den PS in das On-Chip-RAM (OCM), und zwar sowohl im sicheren als auch im unsicheren Boot-Modus. Während des Bootvorgangs lädt die CSU auch die PMU-Benutzerfirmware (PMU FW) in das PMU-RAM, um in Verbindung mit dem PMU-ROM Plattform-Management-Dienste bereitzustellen.
+	\item \textbf{Post-configuration stage oder (Post-Konfigurationsphase)}: Nach dem Start der FSBL-Ausführung geht der CSU-ROM-Code in die Post-Konfigurationsphase über, die für die Reaktion auf Systemmanipulationen verantwortlich ist
+\end{itemize}
+
+\subsubsection{Die Bootloader-Phase}
+\textbf{\normalsize First Stage Bootloader (FSBL)}\\
+Die FSBL ist der sekundäre Programmlader in der Terminologie des generischen ARM-Prozessor-Boot-Prozesses. Der FSBL führt die folgenden Aufgaben aus. FSBL führt die folgenden Aufgaben aus[\cite{XilinxInc.2019}]
+\begin{itemize}
+	\item Suchen in der FAT32-Bootpartition der SD-Karte nach dem PL-Bitstream und dem second stage Bootloader (das U-boot).
+	\item Initialisierung der PS-Hardware, der E/A-Geräte, des Speichers und der Takte entsprechend der Konfiguration, die durch das in der Xilinx Vivado Design Suite spezifizierte Hardware-Design definiert ist
+	\item Programmieren des PL mit dem FPGA-Bitstream
+	\item Laden der ARM Trusted Firmware (ATF) und das U-Boot in den APU-Prozessorspeicher.
+\end{itemize}
+
+\textbf{\normalsize Das U-boot}\\
+Wenn der Prozessor eingeschaltet wird, enthält der Prozessorspeicher kein Betriebssystem, sodass ein Bootloader erforderlich ist, um den Linux-Kernel und den Gerätebaum aus dem Speicher in den Prozessorspeicher zu laden, diese Aufgabe wird also vom U-boot Übernomen. Der U-Boot ist der Second Stage Bootloader (SSBL) für den Xilinx Zynq UltraScale+ MPSoC oder der Tertiary Program Loader (TPL) in der Terminologie des generischen ARM-Bootprozesses.  U-Boot kann den Kernel und den Device-Tree über das Netzwerk mittels Ethernet, über JTAG, von der SD-Karte, Quad-SPI-Flash und vom NAND-Flash-Laufwerk laden.
+
+ Die Abbildung ~\ref{fig:boot:process} Es zeigt die Rolle der verschiedenen Einheiten des Zynq UltraScale+MPSoC beim Booten des Linux-Betriebssystems auf der Hardware. Man sieht, dass die PMU die CSU freigibt, die wiederum die FSBL lädt. Die FSBL lädt dann das ATF und das U-Boot. Das U-Boot ist dann für das Booten von Linux auf der Hardware verantwortlich.
 
 \begin{figure}[h]
 	\begin{center}
@@ -21,11 +108,7 @@ Als Nächstes möchte ich den Boot-Prozess bei Systemen, die auf Zynq UltraScale
 \end{figure}
 
 Der Bootvorgang bie Xilinx Bausteine besteht, ebenso wie bei allen Linux-Systemen, aus drei Phasen \cite{Xilinx2017}[p.~57], die von der Platform Management Unit (PMU) und die Configuration Security Unit (CSU) gesteuert und geführt wird. Das Booten des Geräts kann entweder im sicheren (\Fachbegriff{secure boot}) oder im nicht sicheren (\Fachbegriff{non-secure boot}) Modus durchgeführt werden 
-\begin{itemize}
-	\item \textbf{Pre-configuration stage (Oder Vor-Konfigurationsphase)}: Dieser Phase wird von der PMU angesteuert, die den PMU-ROM-Code zur Einrichtung des Systems ausführt. Die PMU wickelt alle Prozesse im Verbindung mit dem Zurücksetzen und Aufwachen ab.
-	\item \textbf{Configuration stage oder (Konfiguration der Phase)}:Diese Phase übernimmt das Laden des First-Stage-Bootloader-Codes (FSBL) für den PS in das On-Chip-RAM (OCM), und zwar sowohl im sicheren als auch im unsicheren Boot-Modus. Während des Bootvorgangs lädt die CSU auch die PMU-Benutzerfirmware (PMU FW) in das PMU-RAM, um in Verbindung mit dem PMU-ROM Plattform-Management-Dienste bereitzustellen.
-	\item \textbf{Post-configuration stage oder (Post-Konfigurationsphase)}: Nach dem Start der FSBL-Ausführung geht der CSU-ROM-Code in die Nachkonfigurationsphase über, die für die Reaktion auf Systemmanipulationen verantwortlich ist
-\end{itemize}
+
 
 auf dieser Ebene ist das Betriebssystem noch nicht vollständig betriebsbereit. sobald der FSBL an den TF-Agent übergeben wird, dann wird er Auf der Application processing units(APU) ausgeführt. TF-Agent wird an einen Second Stage Boot Loader wie U-Boot übergeben, der ein Betriebssystem wie Linux ausführt und lädt, und Linux lädt seinerseits die ausführbare Software.\\
 Alle bisher genannten Linux-Komponenten, ob die Toolchains, der Bootloader, der Kernel oder das Root-Dateisystem können mit einem Build-System wie dem Yocto-Projekt erstellt werden. Da unser FPGA aber einen MPsoc enthält, der einen Bootloader, ATF-Firmware, pmufw, den Bitstream und u-boot benötigt, ist ein Build System zu verwenden, das automatisch alle diese Komponenten erzeugen kann.. Hierfür ist Petalinux am besten geeignet. Im nächsten Abschnitt werde ich das Petalinux Build System vorstellen. 

@@ -3,9 +3,19 @@
 
 Aus Kostengründen wurde anstelle des FPGA-internen CAN-Controllers ein externer CAN-Controller verwendet. Und viel besser: Dieser CAN-Controller wurde im Unternehmen entwickelt.  Außerdem wurde das von Xilinx entwickelte Board ZCU106 verwendet, das auf dem Zynq Ultracale + MPSoC basiert. Das enthaltene ZU7EV-Gerät(Zynq Ultracale + MPSoC) integriert ein Quad-Core Arm Cortex-A53 Processing System (PS) und einen Dual-Core Arm Cortex-R5F Echtzeit-Prozessor. Das board verfügt auch über viele programmierbare digitale Komponenten, mit denen wiederum eine Vielzahl von Schaltungen realisiert werden können.Wie bereits erwähnt, ist das FPGA Bestandteil des ZCU106 Boards, das im nächsten Kapitel besprochen wird.
 
-\subsection{ZynqMP UltraScale + MPSoC ZCU106 Evaluation Board}
+\subsection{Xilinx ZCU106 Evaluation Board}
 
-Dieses Kapitel beschreibt die ZynqMP + MPSoc-Plattform, insbesondere die Bereiche, die diese Plattform einzigartig machen. Dazu gehören die Zynq Ultrasale + MPSoC Architektur, das Processing System (PS) und die Programmable Logik (PL). Die Peripheriegeräte, die für die Interaktion mit dem CAN-Controller erforderlich sind, werden dabei erwähnt. Genauere Informationen dazu findet man im technischen Referenzhandbuch [\cite{XilinxInc.2019}] des Zynq-Plattforms. 
+Dieses Kapitel beschreibt die Xilinx ZCU106 Evaluation Board, insbesondere die Bereiche, die diese Plattform einzigartig machen. Dazu gehören die Zynq Ultrasale + MPSoC Architektur, das Processing System (PS) und die Programmable Logik (PL). Die Peripheriegeräte, die für die Interaktion mit dem CAN-Controller erforderlich sind, werden dabei erwähnt. Genauere Informationen dazu findet man im technischen Referenzhandbuch [\cite{XilinxInc.2019}] des Zynq-Plattforms. 
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{./images/zcu106.jpg}
+	\end{center}
+	\vspace{-5pt}
+	\caption[Xilinx ZCU102 Evaluation Board]{Xilinx ZCU102 Evaluation Board [\cite{zcuboard.}]}  %Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
+	\label{fig:zcu:board}
+	\vspace{-5pt}
+\end{figure}
 
 %Es ist vorzusehen, dass das Betriebssystem auf mindestens einem der vier physischen Cortex-A53-Prozessoren des ZCU106 laufen wird, mit der Möglichkeit, Bar-Metal-Anwendungen auf anderen Prozessoren laufen zu lassen. 
 
@@ -39,7 +49,7 @@ Bislang gab es für jemanden, der eine CPU in Kombination mit einem FPGA benöti
 Die Abbildung ~\ref{fig:pl:ps} zeigt die Trennung zwischen dem festen Logik-Hardware-Prozessor und der programmierbaren Logik, die einen oder mehrere Soft-Prozessoren enthalten kann. 
 
 \subsubsection{Allgemeine Ansicht des Zynq Ultrasale+ MPSoC}
-Die Zynq Ultrascale+ MPSoC-Serie ist eine im Jahr 2015 von Xilinx eingeführte moderne SoC-Architektur [\cite{CNXSoftware}]. Abbildung ~\ref{fig:zynqmp:block:diagram} zeigt das Blockdiagramm des Zynq Ultrascale+ EG.
+Die Zynq Ultrascale+ MPSoC-Serie ist eine im Jahr 2015 von Xilinx eingeführte moderne SoC-Architektur [\cite{CNXSoftware}]. Abbildung ~\ref{fig:zynqmp:block:diagram} zeigt das Blockdiagramm des Zynq Ultrascale+ EG, der verfügt über mehrere Verarbeitungseinheiten wie die ARM Cortex A53 Application Processing Unit (APU) mit 4 Kernen, die Real-Time Processing Unit (RPU) und die Platform Management Unit (PMU). Die Abbildung zeigt die Schnittstelle zwischen dem Verarbeitungssystem (PS) und der programmierbaren Logik (PL). Die PL verfügt über mehrere Blöcke wie GPIO, Block-RAM und High-Connectivity-Block für die Implementierung von Designs zur Kommunikation mit Peripheriegeräten wie Ethernet oder SPI
 
 \begin{figure}[h]
 	\begin{center}
@@ -57,6 +67,9 @@ Die Zynq Ultrascale+ MPSoC-Serie ist eine im Jahr 2015 von Xilinx eingeführte m
  	\begin{itemize}
  		\item 64-bit Quad-core ARM Cortex-A53 1.5 GHz
  		\item NEON Media Processing Engine + Floating Point Unit (FPU)
+ 		\item Unterstützung für 32/64-Bit-Betriebsmodi
+ 		\item 32 KB Level-1 cache
+ 		\item 1 MB Level-2 cache
  	\end{itemize}
  	\item \textbf{RPU}
  	\begin{itemize}
@@ -109,7 +122,7 @@ Das ZynqMP-Verarbeitungssystem umfasst einerseits den ARM-Prozessor, anderseits 
 
 Abbildung ~\ref{fig:zynqmp:apu} fasst einige wichtige Merkmale der APU zusammen. So verfügt sie beispielsweise über einen separaten 32-KB-Cache der Ebene 1 für Befehle und Daten und einen gemeinsamen 1-MB-Cache der Ebene 2. Eine Snoop Control Unit (SCU) sorgt für Cache-Kohärenz zwischen den Kernen und zeigt an, wenn die Daten ungültig sind.\\
 Der L2-Cache-Controller APU kommuniziert mit dem Rest des SoC über eine 128-Bit AXI Coherency Extension (ACE) Master-Schnittstelle zur Cache Coherent Interconnect\\
-Andererseits kann ein 128-Bit-Accelerator Coherency Port (ACP) Slave-Controller verwendet werden, wenn ein anderer Block mit Master-Zugriff auf Daten im L2-Cache zugreifen möchte. In der Praxis bedeutet dies, dass der PL auf den L2-Cache über den Port S_AXI_ACP_FPD ZUGREIFEN KANN.
+Andererseits kann ein 128-Bit-Accelerator Coherency Port (ACP) Slave-Controller verwendet werden, wenn ein anderer Block mit Master-Zugriff auf Daten im L2-Cache zugreifen möchte. In der Praxis bedeutet dies, dass der PL auf den L2-Cache über den Port S_AXI_ACP_FPD zugriffen kann.
 
 \subsubsection{Programmable Logik (PL)}
 Dieser Abschnitt bietet einen Überblick über die verfügbaren Funktionen der Zynq Ultrascale+ MPSoC Programmable Logic (PL). Tabelle ~\ref{tab:zcu:vergleich} ist ein Vergleich einiger EG-Bausteine. Es gibt tatsächlich mehr Varianten als die dort aufgeführten. Die FPGA-Fabric besteht hauptsächlich aus Logikzellen und konfigurierbaren Logikblöcken (CLB). Ein CLB kann Flipflops und eine Look-up-Table (LUT) enthalten, muss es aber nicht.\\
@@ -133,9 +146,67 @@ Dieser Abschnitt bietet einen Überblick über die verfügbaren Funktionen der Z
 
 Der Speicher eines FPGAs besteht entweder aus dedizierten Speicherblöcken wie BlockRAM und UltraRAM oder aus CLB, die als RAM-Zellen verwendet werden (Distributed RAM). Schließlich enthält das FPGA eine Reihe von DSP48E2 IP-Blöcken, die Multiplikationen und andere arithmetische/logische Aufgaben effizient durchführen können
 
-\subsection{MCP251XFD CAN Controller}
+\subsection{MCP251XFD CAN Controller + Transceiver}
+Bevor wir uns näher mit diesem CAN-Controller befassen, sollte erklärt werden, dass das \grqq x\grqq\ im Namen des Chips entweder \grqq 7\grqq\ oder \grqq 8\grqq\ werden kann. MCP251XFD unterstützt also MCP2517FD und MCP2518FD.\\
+Die Firma entwickelte im Rahmen dieses Projekt, aus kostengünstigen Gründen den  MCP2517FD. Zweck war es, zu prüfen, wie schnell Daten mit diesem CAN-Controller verarbeitet werden können. Auf die Eigenschaften des Chips wird nun im Folgenden eingegangen.
 
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{./images/mcp_ic_phy.jpg}
+	\end{center}
+	\vspace{-5pt}
+	\caption[CAN-Transceiver- und Controller-Modul]{CAN-Transceiver- und Controller-Modul} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
+	\label{fig:can:controller:transciever}
+	\vspace{-5pt}
+\end{figure}
 
+Der MCP2517FD-Chip ist ein kompaktes Board, das eine komplette CAN-Lösung bietet und als Steuerknoten in einem CAN-Netzwerk verwendet wird. Wie in Abbildung 1 zu sehen ist, besteht das Board hauptsächlich aus einem CAN-FD-Controller mit SPI-Schnittstelle (MCP2517FD) und einem Hochgeschwindigkeits-CAN-Transceiver (TLE6251). Letzterer stellt eine physikalische Verbindung mit dem CAN-Bus selbst her, während der CAN-Controller MCP2517FD eine Schnittstelle zwischen der MCU und dem PHY darstellt. Die Aufgabe des CAN-Controllers seinerseits ist es, die Arbitrierung, das Nachrichtenframing, die Nachrichtenvalidierung, die Fehlererkennung, die Nachrichtenfilterung und vieles mehr zu übernehmen. Weiterhin unterstützt er sowohl CAN-Frames im klassischen Format (CAN2.0B) als auch im CAN-Flexible-Data-Rate-Format (CAN FD), wie in ISO 11898- 1:2015.\\
+Der ISO 11898- 1:2015 hier, der von der International Organization for Standardization (ISO) rausgegeben wurde, spezifiziert das klassische CAN-Rahmenformat und das neu eingeführte CAN Flexible Data Rate Frame Format. Das klassische CAN-Frame-Format erlaubt Bitraten bis zu 1 Mbit/s und Nutzdaten bis zu 8 Byte pro Frame, Das Flexible Data Rate Frame Format erlaubt höhere Bitraten als 1 Mbit/s und Nutzdaten von mehr als 8 Byte pro Frame.
 
+\subsubsection{CAN FD Controller Modul}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{./images/mcp_eagle.jpg}
+	\end{center}
+	\vspace{-5pt}
+	\caption[CAN Controller Modul]{CAN Controller Modul} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
+	\label{fig:can:controller}
+	\vspace{-5pt}
+\end{figure}
+
+Der MCP2517FD enthält die folgenden Hauptblöcke[\cite{Transmission2018}]:
+\begin{itemize}
+	\item Das CAN FD Controller-Modul implementiert das CAN FD-Protokoll und enthält die FIFOs und Filter.
+	\item Die SPI-Schnittstelle, die zur Steuerung des Geräts durch Zugriff auf SFRs und RAM verwendet wird
+	\item Der RAM-Controller arbitriert die RAM-Zugriffe zwischen dem SPI- und dem CAN FD Controller-Modul
+	\item Der Nachrichten-RAM, der zur Speicherung der Daten der Nachrichtenobjekte verwendet wird
+	\item Der Oszillator: Das MCP251XFD CAN Controller verwendet den ABM3 Clock Generator, als Standardtaktquelle für den Chip. Der ABM3 auf diesem Board wurde so programmiert, dass er eine Ausgangsfrequenz von 20 MHz erzeugt.
+	
+\end{itemize}
+
+Der Controller kann in verschiedenen Modi eingestellt werden, nämlich
+\begin{itemize}
+	\item Configuration
+	\item Normal CAN FD
+	\item Normal CAN 2.0
+	\item Sleep
+	\item Listen Only
+	\item Restricted Operation: Also Eingeschränkter Betrieb
+	\item und Internal and External Loop back modes (Interner und externer Loopback-Modus)
+\end{itemize}
+\subsubsection{TLE6251 CAN Transceiver}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=1.2\textwidth]{./images/can_transceiver_eagle.jpg}
+	\end{center}
+	\vspace{-5pt}
+	\caption[CAN Transceiver Modul]{CAN Transceiver Modul} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
+	\label{fig:can:transceiver}
+	\vspace{-5pt}
+\end{figure}
+
+Der Hochgeschwindigkeits-CAN-Transceiver, der TLE6251, stellt eine physische Verbindung mit dem CAN-Bus her. Dieser ermöglicht eine Kommunikationsgeschwindigkeit von bis zu 5Mbps und unterstützt die Betriebsmodi Normal und Standby. Der Normalmodus ist eingeschaltet, wenn der STBY-Pin, der auf den AN-Pin der mikroBUS geführt wird, auf einem logischen Low-Pegel liegt, während der TXD-Pin auf einem hohen logischen Pegel gehalten wird. Im Normalmodus können die Daten über die CAN H/L-Busleitungen gesendet und empfangen werden.
 
 
