@@ -1,9 +1,9 @@
 \section{Petalinux Tool Flow}
 \label{sec:Petalinux_Toolflow}
-PetaLinux ist ein Embedded Linux Software Development Kit (SDK), das auf FPGA-basierte System-on-a-Chip (SoC)-Designs abzielt. Petalinux (2020). Es erstellt das Root-Dateisystem unter Verwendung von Yocto, es setzt praktisch auf Yocto auf. Unter PetaLinux versteht man eine Reihe von High-Level-Befehlen, die auf der Yocto-Linux-Distribution aufbauen. Die PetaLinux-Werkzeuge können zur Anpassung, Erstellung und Bereitstellung von Embedded Linux-Lösungen/Linux-Images für Xilinx-Prozessorsysteme verwendet werden. So arbeitet PetaLinux mit den Hardware-Design-Tools von Xilinx (z.B. Vivado) zusammen, um die Entwicklung von Linux-Systemen für unseren Zynq UltraScale+MPSoC zu erleichtern.\\
-Ein wesentlicher Vorteil von petalinux ist, dass es eine Reihe von vereinfachten Befehlen enthält, die für das Booten und die Integration von HW- und SW-Projekten sehr nützlich sind. In Abbildung ~\ref{fig:petalinux:tool:flow} sehen Sie einen Überblick über den PetaLinux-Werkzeugfluss auf oberster Ebene.
+PetaLinux ist ein Embedded Linux Software Development Kit (SDK), das auf FPGA-basierte System-on-a-Chip (SoC)-Designs abzielt[\cite{Xilinx2020}]. Es setzt sich praktisch auf Yocto auf, so wird das Root-Dateisystem unter Verwendung von Yocto erstellt. Unter PetaLinux versteht man eine Reihe von High-Level-Befehlen, die auf der Yocto-Linux-Distribution aufbauen. Die PetaLinux-Werkzeuge können zur Anpassung, Erstellung und Bereitstellung von Embedded Linux-Lösungen/Linux-Images für Xilinx-Prozessorsysteme verwendet werden. 
+Ein wesentlicher Vorteil von petalinux ist, dass es eine Reihe von vereinfachten Befehlen enthält, die für das Booten und die Integration von HW- und SW-Projekten sehr nützlich sind. In Abbildung ~\ref{fig:petalinux:tool:flow} sieht man einen Überblick über den PetaLinux-Werkzeugfluss auf oberster Ebene.
 	
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1.1\textwidth]{./images/petalinux-toolflow.jpg}
 	\end{center}
@@ -28,8 +28,14 @@ Wie jedes Build-System benötigt petalinux viele Ressourcen auf Ihrem PC. Um die
 		$ sudo dpkg-reconfigure dash
 	\end{lstlisting}
 \end{itemize}
+Bevor das Installationsprogramm ausgeführt wird, müssen eine Reihe von Abhängigkeiten installiert werden. Die folgenden Befehle installieren alle erforderlichen Pakete auf einmal:
 
- Einmal die vorherigen Voraussetzungen erfüllt, kann man also die Installationsdatei von Petalinux unter diesem Link \href{https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-design-tools.html}{Petalinux Installer Download}  herunterladen. 
+\begin{lstlisting}[language=bash]
+	$ sudo apt upgrade
+	$ sudo apt install -y python3 tofrodos iproute2 gawk xvfb gcc git make net-tools libncurses5-dev tftpd zlib1g-dev ibssl-dev flex bison libselinux1 gnupg wget diffstat chrpath socat xterm autoconf libtool tar unzip texinfo zlib1g-dev gcc-multilib build-essential libsdl1.2-dev libglib2.0-dev screen pax gzip
+\end{lstlisting}
+
+ Einmal die vorherigen Voraussetzungen erfüllt, kann man also die Installationsdatei von Petalinux unter diesem Link \url{https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-design-tools.html} herunterladen.\\ 
  mit dem \textbf{mkdir} Kommando in Linux kann man ein Petalinux Installation Ornder erstellen, in dem die Installationsdatei dann kopiert wird. mit dem -p Schalter kann den Ordner in einem spezifischen Ordner erstellen.\\
  
 \begin{lstlisting}[language=bash]
@@ -43,6 +49,7 @@ Mit den folgenden Befehlen kann man die Datei ausführbar machen und der Install
 \end{lstlisting}
 
 \subsection{Wichtige Petalinux Kommando}
+\label{sec:Petalinux_Toolflow:petalinux:kommando}
 \begin{itemize}
 	\item \textbf{petalinux-create}: Erstellt ein neue Petalinux Projekt. man kann dem Befehl verschiedenen Optionen zuweisen, 
 	\begin{itemize}

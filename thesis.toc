@@ -24,29 +24,41 @@
 \contentsline {subsection}{\numberline {2.5.3}Der Linux Kernel}{14}{subsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.5.4}Das Linux Root files System (Rootfs)}{15}{subsection.2.5.4}%
 \contentsline {subsection}{\numberline {2.5.5}Der Init Prozess}{15}{subsection.2.5.5}%
-\contentsline {subsection}{\numberline {2.5.6}Der Zynq UltraScale+MPSoC Boot-Prozess}{16}{subsection.2.5.6}%
+\contentsline {subsection}{\numberline {2.5.6}Der Zynq UltraScale+MPSoC Boot-Prozess}{15}{subsection.2.5.6}%
 \contentsline {subsubsection}{\numberline {2.5.6.1}Die Boot-Setup-Phase}{16}{subsubsection.2.5.6.1}%
 \contentsline {subsubsection}{\numberline {2.5.6.2}Die Bootloader-Phase}{17}{subsubsection.2.5.6.2}%
+\contentsline {subsubsection}{\numberline {2.5.6.3}Der Boot Flow}{18}{subsubsection.2.5.6.3}%
+\contentsline {subsection}{\numberline {2.5.7}Die Kernel-Boot-Phase}{19}{subsection.2.5.7}%
+\contentsline {subsection}{\numberline {2.5.8}Die init-Phase}{19}{subsection.2.5.8}%
 \contentsline {section}{\numberline {2.6}Petalinux Tool Flow}{19}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}Petalinux Installation}{20}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Wichtige Petalinux Kommando}{20}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Petalinux Projekt Strukture}{22}{subsection.2.6.3}%
-\contentsline {chapter}{\numberline {3}Umsetzung}{24}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Allgemein über das Projekt}{24}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Hardware Platform}{26}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Xilinx ZCU106 Evaluation Board}{26}{subsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.1.1}Ultrasale + MPSoC Architektur}{27}{subsubsection.3.2.1.1}%
-\contentsline {subsubsection}{\numberline {3.2.1.2}Allgemeine Ansicht des Zynq Ultrasale+ MPSoC}{27}{subsubsection.3.2.1.2}%
-\contentsline {subsubsection}{\numberline {3.2.1.3}Processing System (PS)}{30}{subsubsection.3.2.1.3}%
-\contentsline {subsubsection}{\numberline {3.2.1.4}Programmable Logik (PL)}{30}{subsubsection.3.2.1.4}%
-\contentsline {subsection}{\numberline {3.2.2}MCP251XFD CAN Controller + Transceiver}{31}{subsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.2.1}CAN FD Controller Modul}{32}{subsubsection.3.2.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2.2}TLE6251 CAN Transceiver}{33}{subsubsection.3.2.2.2}%
-\contentsline {section}{\numberline {3.3}Konfiguration und Bauen des Systems}{33}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Fazit und Ausblick}{38}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Fazit}{38}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Ausblick}{38}{section.4.2}%
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{39}{chapter*.31}%
+\contentsline {subsection}{\numberline {2.6.2}Wichtige Petalinux Kommando}{21}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Petalinux Projekt Strukture}{23}{subsection.2.6.3}%
+\contentsline {chapter}{\numberline {3}Umsetzung}{25}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Allgemein über das Projekt}{25}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Hardware Platform}{27}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Xilinx ZCU106 Evaluation Board}{27}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}Ultrasale + MPSoC Architektur}{28}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.2}Allgemeine Ansicht des Zynq Ultrasale+ MPSoC}{29}{subsubsection.3.2.1.2}%
+\contentsline {subsubsection}{\numberline {3.2.1.3}Processing System (PS)}{32}{subsubsection.3.2.1.3}%
+\contentsline {subsubsection}{\numberline {3.2.1.4}Programmable Logik (PL)}{33}{subsubsection.3.2.1.4}%
+\contentsline {subsection}{\numberline {3.2.2}MCP251XFD CAN Controller + Transceiver}{34}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}CAN FD Controller Modul}{36}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}TLE6251 CAN Transceiver}{37}{subsubsection.3.2.2.2}%
+\contentsline {section}{\numberline {3.3}Konfiguration und Bauen des Systems}{38}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Das Yocto Projekt}{38}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.1}Yocto Layer}{38}{subsubsection.3.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.2}Poky}{39}{subsubsection.3.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.3.1.3}Bitbake Engine}{40}{subsubsection.3.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.3.1.4}Bitbake Recipes(Bitbake Rezept)}{40}{subsubsection.3.3.1.4}%
+\contentsline {subsection}{\numberline {3.3.2}Konfigurieren des PetaLinux-Projekts}{41}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Device-Tree Eintrag für den MCP251XFD CAN-Controller}{43}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Rezepte zur Kompilierung der Software Modulen}{45}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Bauen des Systems}{45}{subsection.3.3.5}%
+\contentsline {chapter}{\numberline {4}Fazit und Ausblick}{46}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Fazit}{46}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Ausblick}{46}{section.4.2}%
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{47}{chapter*.37}%
 \contentsline {chapter}{\numberline {A}Anhang}{a}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Inhalt des Datenträgers}{a}{section.A.1}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

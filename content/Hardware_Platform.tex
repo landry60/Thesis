@@ -7,7 +7,7 @@ Aus Kostengründen wurde anstelle des FPGA-internen CAN-Controllers ein externer
 
 Dieses Kapitel beschreibt die Xilinx ZCU106 Evaluation Board, insbesondere die Bereiche, die diese Plattform einzigartig machen. Dazu gehören die Zynq Ultrasale + MPSoC Architektur, das Processing System (PS) und die Programmable Logik (PL). Die Peripheriegeräte, die für die Interaktion mit dem CAN-Controller erforderlich sind, werden dabei erwähnt. Genauere Informationen dazu findet man im technischen Referenzhandbuch [\cite{XilinxInc.2019}] des Zynq-Plattforms. 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1\textwidth]{./images/zcu106.jpg}
 	\end{center}
@@ -35,7 +35,7 @@ FPGAs sind für ihre besondere Flexibilität beim Entwurf digitaler Schaltungen 
 
 Bislang gab es für jemanden, der eine CPU in Kombination mit einem FPGA benötigte, zwei Möglichkeiten: eine diskrete CPU und ein diskretes FPGA, die über einen Bus miteinander kommunizieren (was zu Bandbreitenbeschränkungen führte), oder eine Soft-Core-CPU. Diese wird direkt in den FPGA programmiert (z.B. 32-Bit Microblaze, 64-Bit Ultrascale, usw.). Die Entscheidung hängt von den Einschränkungen und Anforderungen der Anwendung ab, wie z. B. dem Systempreis, dem Stromverbrauch, der Komplexität und selbstverständlich der Leistung. Xilinx bietet mit der Zynq-Serie ein höheres Maß an Integration mit einer System-on-Chip-Hardcore-ARM-CPU, einem Xilinx-FPGA und Bussen für den effizienten Datentransfer zwischen beiden. Darüber hinaus umfassen die Zynq-Bausteine verschiedene Arten von Input/Output (I/O)-Controllern, Speicherschnittstellen und Hochgeschwindigkeits-Transceivern
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1\textwidth]{./images/ps-pl.jpg}
 	\end{center}
@@ -51,7 +51,7 @@ Die Abbildung ~\ref{fig:pl:ps} zeigt die Trennung zwischen dem festen Logik-Hard
 \subsubsection{Allgemeine Ansicht des Zynq Ultrasale+ MPSoC}
 Die Zynq Ultrascale+ MPSoC-Serie ist eine im Jahr 2015 von Xilinx eingeführte moderne SoC-Architektur [\cite{CNXSoftware}]. Abbildung ~\ref{fig:zynqmp:block:diagram} zeigt das Blockdiagramm des Zynq Ultrascale+ EG, der verfügt über mehrere Verarbeitungseinheiten wie die ARM Cortex A53 Application Processing Unit (APU) mit 4 Kernen, die Real-Time Processing Unit (RPU) und die Platform Management Unit (PMU). Die Abbildung zeigt die Schnittstelle zwischen dem Verarbeitungssystem (PS) und der programmierbaren Logik (PL). Die PL verfügt über mehrere Blöcke wie GPIO, Block-RAM und High-Connectivity-Block für die Implementierung von Designs zur Kommunikation mit Peripheriegeräten wie Ethernet oder SPI
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1\textwidth]{./images/zynqmp-blockdiagramm.jpg}
 	\end{center}
@@ -87,7 +87,7 @@ Die Zynq Ultrascale+ MPSoC-Serie ist eine im Jahr 2015 von Xilinx eingeführte m
  
 Der PS unterstützt auch viele Eingangs-/Ausgangsschnittstellen wie SRAM-Schnittstellen (SD, QSPI, NAND), GPIOs, UART usw.
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1\textwidth]{./images/top-level_zynqmp.jpg}
 	\end{center}
@@ -96,6 +96,7 @@ Der PS unterstützt auch viele Eingangs-/Ausgangsschnittstellen wie SRAM-Schnitt
 	\label{fig:zynqmp:top:level}
 	\vspace{-5pt}
 \end{figure}
+
 Im Top-Level-Blockdiagramm der Zynq MPSoC-Architektur ~\ref{fig:zynqmp:top:level} ist die Verbindung zwischen den verschiedenen Blöcken markiert. Da kann die verschiedenen Verarbeitungseinheiten (APU, RPU, GPU) sowie viele Verbindungen zwischen den Blöcken finden. Zu beachten ist, dass die Richtung der Pfeile die Prioritätsreihenfolge zwischen Master und Slave festlegt.
 Sie haben vielleicht bemerkt, dass in Abbildung ~\ref{fig:zynqmp:block:diagram} erwähnt wird, dass es sich um das Blockdiagramm für die EV-Variante handelt. Tatsächlich gibt es drei Varianten des Zynq MPSoC, die wie folgt gekennzeichnet sind:
 
@@ -110,7 +111,9 @@ Die beiden Hauptkomponenten des ZynqMP, das Verarbeitungssystem und die programm
 \subsubsection{Processing System (PS)}
 Das ZynqMP-Verarbeitungssystem umfasst einerseits den ARM-Prozessor, anderseits aber auch mehrere zugehörige Verarbeitungsmodule, die eine Application Processing Unit (APU) bilden, sowie weitere Schnittstellen für Peripheriegeräte, Cache-Speicher, Speicherschnittstellen, Verbindungs- und Takterzeugungsschaltungen. Die APU besteht aus einem speziellen ARM Cortex-A53 MPCore (Quad oder Dual). In der ARM-Gerätefamilie gelten diese als relativ stromsparend, sind aber in der Lage, ein vollwertiges Betriebssystem wie Linux, Android oder ähnliches auszuführen
 
-\begin{figure}[h]
+Abbildung ~\ref{fig:zynqmp:apu} fasst einige wichtige Merkmale der APU zusammen. So verfügt sie beispielsweise über einen separaten 32-KB-Cache der Ebene 1 für Befehle und Daten und einen gemeinsamen 1-MB-Cache der Ebene 2. Eine Snoop Control Unit (SCU) sorgt für Cache-Kohärenz zwischen den Kernen und zeigt an, wenn die Daten ungültig sind.\\
+Der L2-Cache-Controller APU kommuniziert mit dem Rest des SoC über eine 128-Bit AXI Coherency Extension (ACE) Master-Schnittstelle zur Cache Coherent Interconnect\\
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1\textwidth]{./images/apu.jpg}
 	\end{center}
@@ -119,15 +122,12 @@ Das ZynqMP-Verarbeitungssystem umfasst einerseits den ARM-Prozessor, anderseits 
 	\label{fig:zynqmp:apu}
 	\vspace{-5pt}
 \end{figure}
-
-Abbildung ~\ref{fig:zynqmp:apu} fasst einige wichtige Merkmale der APU zusammen. So verfügt sie beispielsweise über einen separaten 32-KB-Cache der Ebene 1 für Befehle und Daten und einen gemeinsamen 1-MB-Cache der Ebene 2. Eine Snoop Control Unit (SCU) sorgt für Cache-Kohärenz zwischen den Kernen und zeigt an, wenn die Daten ungültig sind.\\
-Der L2-Cache-Controller APU kommuniziert mit dem Rest des SoC über eine 128-Bit AXI Coherency Extension (ACE) Master-Schnittstelle zur Cache Coherent Interconnect\\
-Andererseits kann ein 128-Bit-Accelerator Coherency Port (ACP) Slave-Controller verwendet werden, wenn ein anderer Block mit Master-Zugriff auf Daten im L2-Cache zugreifen möchte. In der Praxis bedeutet dies, dass der PL auf den L2-Cache über den Port S_AXI_ACP_FPD zugriffen kann.
+Andererseits kann ein 128-Bit-Accelerator Coherency Port (ACP) Slave-Controller verwendet werden, wenn ein anderer Block mit Master-Zugriff auf Daten im L2-Cache zugreifen möchte. In der Praxis bedeutet dies, dass der PL auf den L2-Cache über den Port %S_AXI_ACP_FPD zugriffen kann.
 
 \subsubsection{Programmable Logik (PL)}
 Dieser Abschnitt bietet einen Überblick über die verfügbaren Funktionen der Zynq Ultrascale+ MPSoC Programmable Logic (PL). Tabelle ~\ref{tab:zcu:vergleich} ist ein Vergleich einiger EG-Bausteine. Es gibt tatsächlich mehr Varianten als die dort aufgeführten. Die FPGA-Fabric besteht hauptsächlich aus Logikzellen und konfigurierbaren Logikblöcken (CLB). Ein CLB kann Flipflops und eine Look-up-Table (LUT) enthalten, muss es aber nicht.\\
 
-\begin{table}[htbp]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{|p{5cm}|p{2cm}|p{2cm}|p{2cm}|}
 		\toprule
@@ -147,10 +147,8 @@ Dieser Abschnitt bietet einen Überblick über die verfügbaren Funktionen der Z
 Der Speicher eines FPGAs besteht entweder aus dedizierten Speicherblöcken wie BlockRAM und UltraRAM oder aus CLB, die als RAM-Zellen verwendet werden (Distributed RAM). Schließlich enthält das FPGA eine Reihe von DSP48E2 IP-Blöcken, die Multiplikationen und andere arithmetische/logische Aufgaben effizient durchführen können
 
 \subsection{MCP251XFD CAN Controller + Transceiver}
-Bevor wir uns näher mit diesem CAN-Controller befassen, sollte erklärt werden, dass das \grqq x\grqq\ im Namen des Chips entweder \grqq 7\grqq\ oder \grqq 8\grqq\ werden kann. MCP251XFD unterstützt also MCP2517FD und MCP2518FD.\\
-Die Firma entwickelte im Rahmen dieses Projekt, aus kostengünstigen Gründen den  MCP2517FD. Zweck war es, zu prüfen, wie schnell Daten mit diesem CAN-Controller verarbeitet werden können. Auf die Eigenschaften des Chips wird nun im Folgenden eingegangen.
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1\textwidth]{./images/mcp_ic_phy.jpg}
 	\end{center}
@@ -159,13 +157,12 @@ Die Firma entwickelte im Rahmen dieses Projekt, aus kostengünstigen Gründen de
 	\label{fig:can:controller:transciever}
 	\vspace{-5pt}
 \end{figure}
-
+Bevor wir uns näher mit diesem CAN-Controller befassen, sollte erklärt werden, dass das \grqq x\grqq\ im Namen des Chips entweder \grqq 7\grqq\ oder \grqq 8\grqq\ werden kann. MCP251XFD unterstützt also MCP2517FD und MCP2518FD.\\
+Die Firma entwickelte im Rahmen dieses Projekt, aus kostengünstigen Gründen den  MCP2517FD. Zweck war es, zu prüfen, wie schnell Daten mit diesem CAN-Controller verarbeitet werden können. Auf die Eigenschaften des Chips wird nun im Folgenden eingegangen.\\
 Der MCP2517FD-Chip ist ein kompaktes Board, das eine komplette CAN-Lösung bietet und als Steuerknoten in einem CAN-Netzwerk verwendet wird. Wie in Abbildung 1 zu sehen ist, besteht das Board hauptsächlich aus einem CAN-FD-Controller mit SPI-Schnittstelle (MCP2517FD) und einem Hochgeschwindigkeits-CAN-Transceiver (TLE6251). Letzterer stellt eine physikalische Verbindung mit dem CAN-Bus selbst her, während der CAN-Controller MCP2517FD eine Schnittstelle zwischen der MCU und dem PHY darstellt. Die Aufgabe des CAN-Controllers seinerseits ist es, die Arbitrierung, das Nachrichtenframing, die Nachrichtenvalidierung, die Fehlererkennung, die Nachrichtenfilterung und vieles mehr zu übernehmen. Weiterhin unterstützt er sowohl CAN-Frames im klassischen Format (CAN2.0B) als auch im CAN-Flexible-Data-Rate-Format (CAN FD), wie in ISO 11898- 1:2015.\\
 Der ISO 11898- 1:2015 hier, der von der International Organization for Standardization (ISO) rausgegeben wurde, spezifiziert das klassische CAN-Rahmenformat und das neu eingeführte CAN Flexible Data Rate Frame Format. Das klassische CAN-Frame-Format erlaubt Bitraten bis zu 1 Mbit/s und Nutzdaten bis zu 8 Byte pro Frame, Das Flexible Data Rate Frame Format erlaubt höhere Bitraten als 1 Mbit/s und Nutzdaten von mehr als 8 Byte pro Frame.
 
-\subsubsection{CAN FD Controller Modul}
-
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1\textwidth]{./images/mcp_eagle.jpg}
 	\end{center}
@@ -183,6 +180,50 @@ Der MCP2517FD enthält die folgenden Hauptblöcke[\cite{Transmission2018}]:
 	\item Der Nachrichten-RAM, der zur Speicherung der Daten der Nachrichtenobjekte verwendet wird
 	\item Der Oszillator: Das MCP251XFD CAN Controller verwendet den ABM3 Clock Generator, als Standardtaktquelle für den Chip. Der ABM3 auf diesem Board wurde so programmiert, dass er eine Ausgangsfrequenz von 20 MHz erzeugt.
 	
+	\begin{table}[H]
+		\centering
+		\begin{tabular}[h]{|l|c|p{5cm}|}
+		%\begin{tabular}{||c|c|p{5cm}||} \hline
+			%\toprule
+			\hline
+			\hline
+			\textbf{Pin} & Name & Beschreibung \\
+			\hline
+			\textbf{1} & CAN0\_TX & TX Interrupt \\
+			\hline
+			\textbf{2} & CAN0\_RX & RX Interrupt \\
+			\hline
+			\textbf{3} & CLKO/SOF & \\
+			\hline
+			\textbf{4} & INT & Interrupt \\
+			\hline
+			\textbf{5} & OSC1 & Clock Output 1 \\
+			\hline
+			\textbf{6} & OSC2 & Clock Output 2 \\
+			\hline
+			\textbf{7} & VSS & Ground \\
+			\hline
+			\textbf{8} & INT0 &  \\
+			\hline
+			\textbf{9} & INT1 & \\
+			\hline
+			\textbf{10} & SCK & SPI Clock \\
+			\hline
+			\textbf{11} & SDI & SPI Data IN \\
+			\hline
+			\textbf{12} & SDO & SPI Data OUT \\
+			\hline
+			\textbf{13} & CS & Chip Select zur Auswahl des Microchips \\
+			\hline
+			\textbf{14} & VDD & Versorgungsspannung des CAN Module. Die Spapnnung liegt zwischen 3.3V und 5V \\
+			\hline
+			\hline
+		\end{tabular}
+		\caption[mcp251xfd Pins]{mcp251xfd Pins}
+		\label{tab:mcp:pins}
+	\end{table}
+	\subsubsection{CAN FD Controller Modul}
+	
 \end{itemize}
 
 Der Controller kann in verschiedenen Modi eingestellt werden, nämlich
@@ -196,10 +237,8 @@ Der Controller kann in verschiedenen Modi eingestellt werden, nämlich
 	\item und Internal and External Loop back modes (Interner und externer Loopback-Modus)
 \end{itemize}
 \subsubsection{TLE6251 CAN Transceiver}
-
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=1.2\textwidth]{./images/can_transceiver_eagle.jpg}
+\begin{figure}[H]
+	\begin{center}		\includegraphics[width=1.2\textwidth]{./images/can_transceiver_eagle.jpg}
 	\end{center}
 	\vspace{-5pt}
 	\caption[CAN Transceiver Modul]{CAN Transceiver Modul} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis

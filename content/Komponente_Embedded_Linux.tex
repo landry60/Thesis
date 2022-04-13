@@ -19,7 +19,7 @@ Der Bootloader muss zunächst von der Festplatte in den Prozessorspeicher gelade
 \subsection{Device-tree}
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=1.1\textwidth]{./images/device-tree.jpg}
+		\includegraphics[width=1\textwidth]{./images/device-tree.jpg}
 	\end{center}
 	\vspace{-5pt}
 	\caption[ZCU106-Gerätbaum gpio-keys and leds]{Ein Screenshot des ZCU106-Gerätebaums, der den Inhalt des gpio-keys und leds  auf dem Board zeigt} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
@@ -57,7 +57,7 @@ Als Nächstes wird den Boot-Prozess bei Systemen, die auf Zynq UltraScale+ MPSoC
 \subsection{Der Zynq UltraScale+MPSoC Boot-Prozess}
 
 Zum Booten von Linux auf dem Zynq UltraScale+MPSoC muss das Boot-Image (BOOT.BIN) auf dem Boot-Medium entsprechend dem vom Benutzer gewählten Boot-Modus vorhanden sein [\cite{Xilinx2017}[p.~14]]. Das ZCU106 Board unterstützt das Booten über JTAG, Quad-SPI Flash, SD Card und NAND Flash Drive. In dieser Arbeit booten wir Linux von der SD-Karte[\cite{Xilinx2020}[p.~61]], daher muss die Datei BOOT.BIN auf der FAT32-Partition der SD-Karte vorhanden sein. Die BOOT.BIN-Datei wurde so konfiguriert, dass sie die Platform Management Unit Firmware (PMUFW), die FSBL und die ausführbaren U-Boot-Dateien beinhaltet, welche die empfohlene Konfiguration für den Zynq UltraScale+ ist. Die BOOT.BIN enthält in dieser Arbeit auch den FPGA-Bitstream zur Programmierung der programmierbaren Logik (PL). Für ein vollständiges Booten über eine SD-Karte sollten das Kernel-Image (Image) und der Device-Tree-Blob ("Projektname.dtb") ebenfalls auf der FAT32-Partition vorhanden sein. Das Root-Dateisystem muss auf der EXT4-Partition der SD-Karte vorhanden sein.\\
-Der Bootvorgang von Linux auf dem Xilinx Zynq UltraScale+ lässt sich in vier Phasen unterteilen
+Der Bootvorgang von Linux auf dem Xilinx Zynq UltraScale+MPSoC lässt sich in vier Phasen unterteilen
 
 \begin{itemize}
 	\item Die Boot-Setup-Phase
@@ -95,22 +95,36 @@ Die FSBL ist der sekundäre Programmlader in der Terminologie des generischen AR
 \textbf{\normalsize Das U-boot}\\
 Wenn der Prozessor eingeschaltet wird, enthält der Prozessorspeicher kein Betriebssystem, sodass ein Bootloader erforderlich ist, um den Linux-Kernel und den Gerätebaum aus dem Speicher in den Prozessorspeicher zu laden, diese Aufgabe wird also vom U-boot Übernomen. Der U-Boot ist der Second Stage Bootloader (SSBL) für den Xilinx Zynq UltraScale+ MPSoC oder der Tertiary Program Loader (TPL) in der Terminologie des generischen ARM-Bootprozesses.  U-Boot kann den Kernel und den Device-Tree über das Netzwerk mittels Ethernet, über JTAG, von der SD-Karte, Quad-SPI-Flash und vom NAND-Flash-Laufwerk laden.
 
- Die Abbildung ~\ref{fig:boot:process} Es zeigt die Rolle der verschiedenen Einheiten des Zynq UltraScale+MPSoC beim Booten des Linux-Betriebssystems auf der Hardware. Man sieht, dass die PMU die CSU freigibt, die wiederum die FSBL lädt. Die FSBL lädt dann das ATF und das U-Boot. Das U-Boot ist dann für das Booten von Linux auf der Hardware verantwortlich.
+Die Abbildung ~\ref{fig:boot:process} Es zeigt die Rolle der verschiedenen Einheiten des Zynq UltraScale+MPSoC beim Booten des Linux-Betriebssystems auf der Hardware. Man sieht, dass die PMU die CSU freigibt, die wiederum die FSBL lädt. Die FSBL lädt dann das ATF und das U-Boot. Das U-Boot ist dann für das Booten von Linux auf der Hardware verantwortlich.
 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=1.1\textwidth]{./images/boot-flow.jpg}
 	\end{center}
 	\vspace{-5pt}
-	\caption[der Bootvorgang bei zynq+MPSoCs]{Überblick über den Bootvorgang \cite{Xilinx2017}[p.~58]} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
+	\caption[der Bootvorgang bei zynq+MPSoCs]{Überblick über den Bootvorgang \cite{XilinxInc.2019}[p.~58]} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
 	\label{fig:boot:process}
 	\vspace{-5pt}
 \end{figure}
 
-Der Bootvorgang bie Xilinx Bausteine besteht, ebenso wie bei allen Linux-Systemen, aus drei Phasen \cite{Xilinx2017}[p.~57], die von der Platform Management Unit (PMU) und die Configuration Security Unit (CSU) gesteuert und geführt wird. Das Booten des Geräts kann entweder im sicheren (\Fachbegriff{secure boot}) oder im nicht sicheren (\Fachbegriff{non-secure boot}) Modus durchgeführt werden 
 
+\subsubsection{Der Boot Flow}
 
-auf dieser Ebene ist das Betriebssystem noch nicht vollständig betriebsbereit. sobald der FSBL an den TF-Agent übergeben wird, dann wird er Auf der Application processing units(APU) ausgeführt. TF-Agent wird an einen Second Stage Boot Loader wie U-Boot übergeben, der ein Betriebssystem wie Linux ausführt und lädt, und Linux lädt seinerseits die ausführbare Software.\\
-Alle bisher genannten Linux-Komponenten, ob die Toolchains, der Bootloader, der Kernel oder das Root-Dateisystem können mit einem Build-System wie dem Yocto-Projekt erstellt werden. Da unser FPGA aber einen MPsoc enthält, der einen Bootloader, ATF-Firmware, pmufw, den Bitstream und u-boot benötigt, ist ein Build System zu verwenden, das automatisch alle diese Komponenten erzeugen kann.. Hierfür ist Petalinux am besten geeignet. Im nächsten Abschnitt werde ich das Petalinux Build System vorstellen. 
+Der Zynq UltraScale+ MPSoC kann in zwei Modi gebootet werden: im sicheren und im unsicheren Modus. Diese werden im Folgenden beschrieben[\cite{XilinxInc.2019}[p.~58]]
+
+\textbf{\normalsize Nicht gesicherter Bootvorgang}\\
+In diesem Boot-Modus gibt die PMU die CSU frei und wechselt in den Servicemodus, in dem sie die Plattform überwacht. Die CSU lädt die FSBL in den On-Chip-Speicher (OCM) der APU und die PMUFW in das RAM der PMU. Die PMUFW wird parallel zur Ausführung der FSBL ausgeführt und läuft, bis Linux auf dem Zynq UltraScale+ MPSoC gebootet ist. Der FSBL initialisiert die Peripheriegeräte, E/A-Geräte, den Speicher und die Takte und übergibt sie an den ATF, der sie dann an das U-Boot weitergibt. Das U-Boot lädt dann den Linux-Kernel in das APU-Prozessor-Memo
+
+\textbf{Sicherer Bootvorgang}\\
+
+Der sichere Bootvorgang unterscheidet sich vom unsicheren Bootvorgang nur durch einige zusätzliche Authentifizierungs- und Entschlüsselungsschritte, die von der CSU ausgeführt werden. Beim sicheren Bootvorgang gibt die PMU den Reset der Configuration Security Unit (CSU) frei und geht in den PMU-Servermodus über, in dem sie die Stromversorgung überwacht. Nachdem die PMU das Zurücksetzen der CSU aufgehoben hat, prüft die CSU, ob eine Authentifizierung durch die FSBL oder die Benutzeranwendung erforderlich ist 
+
+\subsection{Die Kernel-Boot-Phase}
+Das U-Boot sorgt für das Laden des Kernel-Images und des Gerätebaums in den Speicher des APU-Prozessors und die Übergabe der Kontrolle an den Kernel. Der Kernel erhält auch die Adresse des Gerätebaums, der den Kernel über die Hardware-Peripherie, E/A-Geräte, Speicher und Taktgeber informiert. Basierend auf diesen Informationen startet der Kernel den Bootvorgang und aktiviert die Treiber und Dienste, für die der Kernel konfiguriert wurde. Nachdem der Kernel gebootet hat, mountet er das Root-Dateisystem entsprechend den an den Kernel übergebenen Boot-Argumenten. Je nach dem an den Kernel übergebenen Boot-Argument hängt der Kernel das Root-Dateisystem über NFS oder von der SD-Karte oder einem anderen permanenten Speicherort ein.
+
+\subsection{Die init-Phase}
+
+Nach Einhängen des Root-Dateisystems sucht der Kernel nach der ausführbaren Datei des für die Linux-Distribution angegebenen init-Prozesses. Sobald der Kernel den init-Prozess gefunden hat, führt er ihn aus und übergibt die Kontrolle an den init-Prozess. Der init-Prozess aktiviert dann alle Systemverwaltungs- und andere Hintergrunddienste, die im Root-Dateisystem installiert und im Benutzerbereich aktiviert wurden. Nach der Aktivierung dieser Dienste startet der init-Prozess den Benutzeranmeldungsprozess, der es dem Benutzer ermöglicht, den Benutzerraum zu betreten\\
+Alle bisher genannten Linux-Komponenten, ob der Bootloader, der Kernel oder das Root-Dateisystem können mit einem Build-System wie dem Yocto-Projekt erstellt werden. Da unser FPGA aber einen MPsoc enthält, der einen Bootloader, ATF-Firmware, pmufw, den Bitstream und u-boot benötigt, ist ein Build System zu verwenden, das automatisch alle diese Komponenten erzeugen kann.. Hierfür ist Petalinux am besten geeignet. Im nächsten Abschnitt werde ich das Petalinux Build System vorstellen. 
 
 

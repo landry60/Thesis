@@ -12,18 +12,23 @@
 \contentsline {figure}{\numberline {2.8}{\ignorespaces SPI Bus}}{10}{figure.caption.16}%
 \contentsline {figure}{\numberline {2.9}{\ignorespaces ZCU106-Gerätbaum gpio-keys and leds}}{13}{figure.caption.17}%
 \contentsline {figure}{\numberline {2.10}{\ignorespaces der Bootvorgang bei zynq+MPSoCs}}{18}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces PetaLinux-Werkzeugfluss}}{19}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces petalinux Projektstruktur}}{22}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces PetaLinux-Werkzeugfluss}}{20}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces petalinux Projektstruktur}}{23}{figure.caption.20}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Versuchsaufbau ZynqMP Ultralcale + mcp251xfd}}{25}{figure.caption.21}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Xilinx ZCU102 Evaluation Board}}{26}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Hard-(ARM Cortex-A9/Cortex-A53) und Soft-Prozessoren (MicroBlaze)}}{28}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Zynq UltraScale+ MPSoC EV Block Diagram}}{29}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Zynq UltraScale+ MPSoC Top-Level Blockdiagramm}}{34}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Detailliertes APU-Blockdiagramm}}{35}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces CAN-Transceiver- und Controller-Modul}}{36}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces CAN Controller Modul}}{36}{figure.caption.29}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces CAN Transceiver Modul}}{37}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Versuchsaufbau ZynqMP Ultralcale + mcp251xfd}}{26}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Xilinx ZCU102 Evaluation Board}}{27}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Hard-(ARM Cortex-A9/Cortex-A53) und Soft-Prozessoren (MicroBlaze)}}{29}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Zynq UltraScale+ MPSoC EV Block Diagram}}{30}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Zynq UltraScale+ MPSoC Top-Level Blockdiagramm}}{31}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Detailliertes APU-Blockdiagramm}}{33}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces CAN-Transceiver- und Controller-Modul}}{34}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces CAN Controller Modul}}{35}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces CAN Transceiver Modul}}{37}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Menuconfig Startbildschirm des PetaLinux-Projekts}}{41}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Pfard zur mcp251xfd Treiber}}{42}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Konfig Fenster mcp251xfd Treiber}}{42}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Device-tree Projekt Struktur}}{43}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Xilinx SPI-Controller}}{44}{figure.caption.36}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
