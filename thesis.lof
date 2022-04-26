@@ -24,12 +24,20 @@
 \contentsline {figure}{\numberline {3.7}{\ignorespaces CAN-Transceiver- und Controller-Modul}}{34}{figure.caption.28}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces CAN Controller Modul}}{35}{figure.caption.29}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces CAN Transceiver Modul}}{37}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Menuconfig Startbildschirm des PetaLinux-Projekts}}{41}{figure.caption.32}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Pfard zur mcp251xfd Treiber}}{42}{figure.caption.33}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Konfig Fenster mcp251xfd Treiber}}{42}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Device-tree Projekt Struktur}}{43}{figure.caption.35}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Xilinx SPI-Controller}}{44}{figure.caption.36}%
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Menuconfig Startbildschirm des PetaLinux-Projekts}}{39}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Menuconfig Startbildschirm des PetaLinux-Projekts}}{41}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Pfard zur mcp251xfd Treiber}}{42}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Konfig Fenster mcp251xfd Treiber}}{42}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Device-tree Projekt Struktur}}{43}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Xilinx SPI-Controller}}{44}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Neue Yocto-Ebene für IPU-NG Software Module}}{47}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Aktivierung Software Pakete in Rootfs}}{50}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Formatierung der SD-Karte Partitionen}}{51}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Laden des mcp251xfd Treibers}}{53}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Inbetriebnahme des CAN-Mikrochips}}{53}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Gesendete CAN-Nachrichten}}{54}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Empfangene CAN-Nachrichten}}{54}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Test Statistiken}}{55}{figure.caption.45}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

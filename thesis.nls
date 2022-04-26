@@ -23,5 +23,6 @@
   \item [{RPU}]\begingroup Real-time processing units\nomeqref {0.0}\nompageref{V}
   \item [{RTR}]\begingroup Remote Transmission Request\nomeqref {0.0}\nompageref{V}
   \item [{SOF}]\begingroup Start of Frame\nomeqref {0.0}\nompageref{V}
+  \item [{XSDB}]\begingroup Xilinx System Debugger\nomeqref {0.0}\nompageref{V}
 
 \end{thenomenclature}

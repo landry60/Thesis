@@ -2,7 +2,7 @@
 \contentsline {chapter}{Inhaltsverzeichnis}{IV}{section*.4}%
 \contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{VI}{chapter*.6}%
 \contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{VII}{chapter*.7}%
-\contentsline {chapter}{\nonumberline Verzeichnis der Listings}{VIII}{chapter*.8}%
+\contentsline {chapter}{\nonumberline Verzeichnis der Listings}{IX}{chapter*.8}%
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Ziel der Arbeit}{1}{section.1.2}%
@@ -54,11 +54,12 @@
 \contentsline {subsection}{\numberline {3.3.2}Konfigurieren des PetaLinux-Projekts}{41}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Device-Tree Eintrag für den MCP251XFD CAN-Controller}{43}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Rezepte zur Kompilierung der Software Modulen}{45}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Bauen des Systems}{45}{subsection.3.3.5}%
-\contentsline {chapter}{\numberline {4}Fazit und Ausblick}{46}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Fazit}{46}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Ausblick}{46}{section.4.2}%
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{47}{chapter*.37}%
-\contentsline {chapter}{\numberline {A}Anhang}{a}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Inhalt des Datenträgers}{a}{section.A.1}%
+\contentsline {subsubsection}{\numberline {3.3.4.1}Hinzufügen einer neue Layer zu BBLAYERS}{46}{subsubsection.3.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.3.4.2}Rezept zur Kompilierung der Software Modulen}{47}{subsubsection.3.3.4.2}%
+\contentsline {subsection}{\numberline {3.3.5}Bauen des Systems}{50}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Booten des eingebetteten Linux-Images und Test des MCP251xfd CAN-Controller}{52}{subsection.3.3.6}%
+\contentsline {chapter}{\numberline {4}Fazit und Ausblick}{56}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Fazit}{56}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Ausblick}{56}{section.4.2}%
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{57}{chapter*.46}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

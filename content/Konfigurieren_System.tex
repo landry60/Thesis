@@ -13,41 +13,17 @@ Das Yocto-Projekt verwendet ein Schichtenmodell(Layer Model), das den Benutzern 
 \subsubsection{Yocto Layer}
 
 Yocto-Layer oder Meta-Daten-Layer sind Repositories von Konfigurations- und Build-Skripten zusammen mit Build-Spezifikationen (BitBake-Rezepten), die dem Yocto-Build-System (OpenEmbedded Build System) mitteilen, wie eine angepasste Linux-Distribution zu bauen ist. Sie können hardwarespezifisch sein, oder so flexibel sein, dass sie auch für andere Architekturen angepasst werden können
-Je nachdem, wie komplex der Entwickler eine bestimmte Schicht gestalten möchte, können Layer verwendet werden, um bestimmte Build-Aufgaben zu trennen oder zu kombinieren. Die Erhöhung der Build-Aufgaben, die mit  bestimmten Layers verbunden sind, erhöht die Komplexität des Projekts und erschwert den Entwicklern die Anpassung, Wartung und Wiederverwendung von diesen Layers. 
+Je nachdem, wie komplex der Entwickler eine bestimmte Schicht gestalten möchte, können Layer verwendet werden, um bestimmte Build-Aufgaben zu trennen oder zu kombinieren. Die Erhöhung der Build-Aufgaben, die mit  bestimmten Layers verbunden sind, erhöht die Komplexität des Projekts und erschwert den Entwicklern die Anpassung, Wartung und Wiederverwendung von diesen Layers. Abbildung ~\ref{fig:bblayers} zeigt die Ausgabe einer typische bblayers.conf Datei.
 
-%or \small or \footnotesize etc.
-\begin{lstlisting}[backgroundcolor = \color{lightgray},basicstyle=\scriptsize\ttfamily,caption={Inhalt einer bblayers.conf Datei in Yocto},label=lst:bblayers,language=bash,framexleftmargin = 2em]
-	LCONF_VERSION = "7"
-	
-	BBPATH = "${TOPDIR}"
-	SDKBASEMETAPATH = "/home/landry/mein_Abschluss/IPU-NG/components/yocto"
-	BBLAYERS := " \
-	${SDKBASEMETAPATH}/layers/core/meta \
-	${SDKBASEMETAPATH}/layers/core/meta-poky \
-	${SDKBASEMETAPATH}/layers/meta-openembedded/meta-perl \
-	${SDKBASEMETAPATH}/layers/meta-openembedded/meta-python \
-	${SDKBASEMETAPATH}/layers/meta-openembedded/meta-filesystems \
-	${SDKBASEMETAPATH}/layers/meta-openembedded/meta-gnome \
-	${SDKBASEMETAPATH}/layers/meta-openembedded/meta-multimedia \
-	${SDKBASEMETAPATH}/layers/meta-openembedded/meta-networking \
-	${SDKBASEMETAPATH}/layers/meta-openembedded/meta-webserver \
-	${SDKBASEMETAPATH}/layers/meta-openembedded/meta-xfce \
-	${SDKBASEMETAPATH}/layers/meta-openembedded/meta-initramfs \
-	${SDKBASEMETAPATH}/layers/meta-openembedded/meta-oe \
-	${SDKBASEMETAPATH}/layers/meta-xilinx/meta-xilinx-bsp \
-	${SDKBASEMETAPATH}/layers/meta-xilinx/meta-xilinx-pynq \
-	${SDKBASEMETAPATH}/layers/meta-xilinx/meta-xilinx-contrib \
-	${SDKBASEMETAPATH}/layers/meta-xilinx/meta-xilinx-standalone \
-	${SDKBASEMETAPATH}/layers/meta-xilinx-tools \
-	${SDKBASEMETAPATH}/layers/meta-petalinux \
-	${SDKBASEMETAPATH}/layers/meta-som \
-	${SDKBASEMETAPATH}/layers/meta-security \
-	${SDKBASEMETAPATH}/layers/meta-security/meta-tpm \
-	/home/landry/mein_Abschluss/IPU-NG/project-spec/meta-user \
-	/home/landry/mein_Abschluss/IPU-NG/components/yocto/workspace \
-	/home/landry/mein_Abschluss/IPU-NG/project-spec/meta-ipu_ng \
-	"
-\end{lstlisting}
+\begin{figure}[H]
+	\begin{center}		\includegraphics[width=1\textwidth]{./images/bblayer_datei.jpg}
+	\end{center}
+	\vspace{-5pt}
+	\caption[Menuconfig Startbildschirm des PetaLinux-Projekts]{Menuconfig Startbildschirm des PetaLinux-Projekts} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
+	\label{fig:bblayers}
+	\vspace{-5pt}
+\end{figure}
+
 
 
 \subsubsection{Poky}
@@ -131,7 +107,7 @@ Der oben gezeigte Pfad führt uns zum Kernel-Fenster, wo man den Treiber für de
 Damit unser Mikrochip nach dem Bootvorgang in Betrieb genommen werden kann, müssen dem Kernel Informationen (wie z.B. der Name des Hardwaretreibers, die Taktfrequenz oder der Interrupt-Pin...) übergeben werden, damit die Hardware während des Bootvorgangs initialisiert wird. Daher wird in Petalinux empfohlen, die Datei \textbf{system-user.dtsi} zum Hinzufügen, Löschen oder Ändern eines Gerätebaumknotens zu verwenden. Diese Datei befindet sich in \textbf{<project>/project spec/meta-user/recipes-bsp/device-tree/files/}. Sie wird an das Ende der Datei system-top.dts gestellt wie im Listing ~\ref{lst:device:tree:top} dargestellt, so dass sie eine höhere Priorität erhält, und wird somit zuerst kompiliert.
 
 %\newpage
-
+%or \small or \footnotesize etc.
 \begin{lstlisting}[backgroundcolor = \color{lightgray},basicstyle=\scriptsize\ttfamily,caption={Inhalt der system-top.dts Datei},label=lst:device:tree:top,language=bash,framexleftmargin = 2em]
 /dts-v1/;
 #include "zynqmp.dtsi"
@@ -171,7 +147,7 @@ Das Petalinux-Projekt wurde mit einer von Vivado exportierten Hardwarebeschreibu
 	\vspace{-5pt}
 \end{figure}
 
-Der Code, der in Abbildung ~\ref{fig:deviceTree:spi:controller} zu sehen ist. beschreibt den im Vivado implementierten Xilinx-SPI-Controller, an den unser CAN-Controller angeschlossen werden soll. im \textbf{reg} ist die Basisadresse und der Adressbereich, in dem der SPI-Controller betrieben wird. \\
+Der Code, der in Abbildung ~\ref{fig:deviceTree:spi:controller} zu sehen ist. beschreibt den im Vivado implementierten Xilinx-SPI-Controller, an den unserer CAN-Controller angeschlossen werden soll. im \textbf{reg} ist die Basisadresse und der Adressbereich, in dem der SPI-Controller betrieben wird. \\
 Der Code, der in den aktuellen Device-tree für den CAN-Controller eingefügt werden muss, ist der unten stehende.
 \begin{lstlisting}[backgroundcolor = \color{lightgray},basicstyle=\scriptsize\ttfamily,caption={Device-tree Eintrag für den mcp251xfd CAN-Controller},label=lst:device:tree:mcp,language=bash,framexleftmargin = 2em]
 	
@@ -213,6 +189,297 @@ wichtige Information dazu wurde in den folgende Tabelle zusammengefasst.
 	\textit{spi-max-frequency} & steht für die maximale SPI-Taktfrequenz des Geräts. Diese wurde auf 8,33 MHz gesetzt, da für eine gute Kommunikation mit dem SPI-Master die SPI-Taktfrequenz die Hälfte oder weniger des Takts betragen sollte. \\
 	\bottomrule
 \end{tabular}
-\subsection{Rezepte zur Kompilierung der Software Modulen}
-\subsection{Bauen des Systems}
 
+\subsection{Rezepte zur Kompilierung der Software Modulen}
+Für die Erstellung von Rezepte wurde im Rahmen dieser Arbeit das Petalinux-devtool verwendet. Das ist ein Werkzeug, welches das Yocto devtool benutzt, um Software zu bauen, zu testen und einzubinden. Mit dem "petalinux-devtool"\ Kommando kann man zum Beispiel:
+\begin{itemize}
+	\item neue Rezepte einfügen
+	\item Quelle Code von existierenden Rezepte ändern
+	\item Umbenennen einer Rezeptdatei im Arbeitsbereich
+	\item Oder Rezepte kompilieren 
+\end{itemize}
+
+Um die neuen Änderungen vom Rest des Projekts zu isolieren, wurde eine neue Ebene erstellt, in die alle Änderungen geschrieben wurden.
+
+	\subsubsection{Hinzufügen einer neue Layer zu BBLAYERS}
+	Es wurde zuerst ein neue Ebene-Verzeichnis und dessen Konfigurationsverzeichnis erstellt. dafür wurde ein bestehende Layers konfigurationsdatei in das conf-Verzeichnis der meta-Layers kopiert und wie folgt geändert. Diese Datei enthält die Informationen, die von BitBake benötigt werden, um die Ebene und die darin enthaltenen Metadaten zu erkennen. Insbesondere enthält diese Datei die Variable \textbf{BBPATH}, die das Stammverzeichnis des Layers angibt, in dem BitBake alle Dateien finden soll, die von Rezepten geerbt werden. Außerdem gibt die Variable \textbf{BBFILES} die Pfade an, in denen BitBake erwartet, Rezepte zu finden. Abhängigkeiten zwischen Schichten müssen stattdessen durch die Variable \textbf{LAYERDEPENDS_*} ausgedrückt werden.
+
+	\begin{lstlisting}[backgroundcolor = \color{lightgray},basicstyle=\scriptsize\ttfamily,caption={Hinzufügen neue Yocto-ebene},label=lst:ipu:ng:layer,language=bash,framexleftmargin = 2em]
+		
+	# We have a conf and classes directory, add to BBPATH
+	BBPATH .= ":${LAYERDIR}"
+	
+	# We have recipes-* directories, add to BBFILES
+	BBFILES += "${LAYERDIR}/recipes-*/*/*.bb \
+	${LAYERDIR}/appends/*.bbappend"
+	
+	BBFILE_COLLECTIONS += "meta-ipu_ng"
+	BBFILE_PATTERN_meta-ipu_ng = "^${LAYERDIR}/"
+	BBFILE_PRIORITY_meta-ipu_ng = "8"
+	LAYERSERIES_COMPAT_meta-ipu_ng = "gatesgarth"
+	
+	# Set a variable to get to the top of the meta-layer location
+	HAB_BASE := '${LAYERDIR}'
+	\end{lstlisting}
+
+	Anschlissend sollte die neue Yocto-Layer mit Hilfe des Systemkonfiguration Menü zu der hauptkonfiguration Layers (BBLAYER) hinzugefügt werden. Die Datei enthält alle Verweise auf die Ebenen, die von BitBake während des Analyseprozesses der Rezepte gescannt werden.
+	
+	\begin{figure}[H]
+		\begin{center}		\includegraphics[width=0.8\textwidth]{./images/ip_ng_layer.jpg}
+		\end{center}
+		\vspace{-5pt}
+		\caption[Neue Yocto-Ebene für IPU-NG Software Module]{Neue Yocto-Layer für IPU-NG Software Module} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
+		\label{fig:yocto_layer_ipu_ng}
+		\vspace{-5pt}
+	\end{figure}
+
+Das Abbildung ~\ref{fig:bblayers} ist beispielsweise die Ausgabe der Datei \textbf{bblayers.conf} des Projekts. Am Ende können Sie sehen, dass die neue Layer am Ende der Datei eingefügt wird, nachdem das Projekt kompiliert wurde. 
+	\subsubsection{Rezept zur Kompilierung der Software Modulen}
+	Die folgen Variable wurden notwendig für die Erstellung der Rezepten. 
+	\begin{description}
+		\item[SUMMARY]: Diese Variable enthält einen String-Wert, den der Benutzer hilft zu wissen, worum es in dem Rezept geht.
+		\item[LICENSE]: In dieser Variable ist die Art der Lizenz anzugeben, die man für das Rezept verwenden möchten. In unsere Fall ist es CLOSE, da man die in Firma entwickelte Software verwenden.
+		\item[LIC_FILES_CHKSUM]: Diese Datei wird von dem OpenEmbedded-Build-System verwendet, um sicherzustellen, dass sich der Lizenztext nicht geändert hat. Diese Variable ist bei uns aber Leer, da wir die Liezens "CLOSE" verwenden.
+		\item[PR]: Es geben wir das Revision Paket an. Der wurde in unsere Fall auf r0 gesetzt. 
+		\item[PV]: definiert die Version des Rezepts
+		\item[SRC_URI]: Hier wird der Pfad zum Quellcode der Software angegeben. In unserem Fall werden die Quellcodes vom Git-Server des Unternehmens abgerufen.
+		\item[DEPENDS]: Hier werden Abhängigkeiten, die zur Kompilierungszeit gebraucht werden, angegeben.
+		\item[S]: Hier gibt man das Quellverzeichnis an, in dem man die gesamte Erstellung durchführen kann.
+	\end{description}
+		
+Das vom Yocto-Projekt unterstützte CMake Autotools wird im Rezept zum Konfigurieren, Kompilieren und Installieren der Software verwendet. Der Zweck dieser Werkzeuge ist es, die Arbeit des Programmierers zu erleichtern, indem mehrere Schritte des Erstellungsprozesses automatisiert werden. Nachfolgend sind die Rezepte zur Kompilierung der Software beschrieben.
+
+\begin{lstlisting}[backgroundcolor = \color{lightgray},basicstyle=\scriptsize\ttfamily,caption={Rezept für das sw-main-app Modul},label=lst:sw_main_app:modul,language=bash,framexleftmargin = 2em]
+	
+	#
+	# This file is the sw-main-app recipe.
+	#
+	
+	SUMMARY = "sw-main-app applications"
+	LICENSE = "CLOSED" 
+	#LIC_FILES_CHKSUM = " "
+	
+	#PR = "r0"
+	#PV = "1.0.5+git${SRCPV}"
+	
+	SRC_URI = "https://csp.edag.de/bitbucket/scm/ee21i00805/sw-main-app.git"
+	PV = "1.0+git${SRCPV}"
+	
+	SRCREV = "${AUTOREV}"
+	S = "${WORKDIR}/git"
+	
+	DEPENDS = "gstreamer1.0 gstreamer1.0-plugins-base glib-2.0 sw-system-module sw-system-logger"
+	
+	inherit cmake pkgconfig 
+	
+\end{lstlisting}
+
+\begin{lstlisting}[backgroundcolor = \color{lightgray},basicstyle=\scriptsize\ttfamily,caption={Rezept für das sw-system-module Modul},label=lst:sw_system_module:modul,language=bash,framexleftmargin = 2em]
+#
+## This file is the sw-system-module recipe.
+##
+SUMMARY = "sw-system-module applications"
+LICENSE = "CLOSED"
+LIC_FILES_CHKSUM = ""
+
+SRC_URI = "https://csp.edag.de/bitbucket/scm/ee21i00805/sw-system-module.git"
+
+PV = "1.0+git${SRCPV}"
+SRCREV = "${AUTOREV}"
+
+S = "${WORKDIR}/git"
+DEPENDS = "gstreamer1.0 gstreamer1.0-plugins-base glib-2.0"
+
+inherit cmaken pkgconfig
+
+\end{lstlisting}
+\newpage
+\begin{lstlisting}[backgroundcolor = \color{lightgray},basicstyle=\scriptsize\ttfamily,caption={Rezept für das sw-system-module Modul},label=lst:sw_system_logger:modul,language=bash,framexleftmargin = 2em]
+#
+#
+## This file ist the sw-system-logger recipe
+# 
+SUMMARY = "sw-system-logger applications"                          
+LICENSE = "CLOSED"
+LIC_FILES_CHKSUM = ""
+
+SRC_URI = "https://csp.edag.de/bitbucket/scm/ee21i00805/sw-system-logger.git"
+
+
+PV = "1.0+git${SRCPV}"
+SRCREV = "515609c99db34769320e54c5535cbfe58031839b"
+
+S = "${WORKDIR}/git"
+DEPENDS = "gstreamer1.0 gstreamer1.0-plugins-base glib-2.0 sw-system-module"
+
+inherit cmake pkgconfig
+\end{lstlisting}
+
+Jede dieser Rezepte lassen sich mit dem folgenden Kommando kompilieren.
+\begin{lstlisting}[language=bash]
+	$ petalinux-devtool build <recipe_name>
+\end{lstlisting}
+
+Die resultierenden Softwarepakete wurden dann in rootfs aufgenommen, indem ein Eintrag in der Datei (\${PROOT}/project-spec/project-spec/meta-user/conf/user-rootfsconfig) erstellt wurde, wie in Listing ~\ref{lst:sw_paket:rootfs} dargestellt.
+
+\begin{lstlisting}[backgroundcolor = \color{lightgray},basicstyle=\scriptsize\ttfamily,caption={Einbindung Software in Rootfs},label=lst:sw_paket:rootfs,language=bash,framexleftmargin = 2em]
+#Note: Mention Each package in individual line
+#These packages will get added into rootfs menu entry
+
+CONFIG_gpio-demo
+CONFIG_peekpok
+
+CONFIG_sw-main-app
+CONFIG_sw-system-module
+CONFIG_sw-system-logger
+
+CONFIG_gstreamer-vcu-examples
+CONFIG_packagegroup-petalinux-v4lutils
+CONFIG_packagegroup-petalinux-audio
+	
+\end{lstlisting}
+
+Bevor die Software Pakete(sw-main-app, sw-system-logger, sw-system-module) schlißlich in Rootfs integriert werden können müssen sie noch in dem Rootfs Konfiguration Menü aktiviert werden.
+\begin{figure}[H]
+	\begin{center}		\includegraphics[width=1\textwidth]{./images/rootfs_config_sw.jpg}
+	\end{center}
+	\vspace{-5pt}
+	\caption[Aktivierung Software Pakete in Rootfs]{Aktivierung Software Pakete in Rootfs} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
+	\label{fig:rootfs_config:sw}
+	\vspace{-5pt}
+\end{figure} 
+
+\subsection{Bauen des Systems}
+Nachdem alle Konfiguration gemacht wurden. könnte das Petalinux Projekt anschließend mit dem Kommando \textbf{petalinux-build} gebaut werden. Das petalinux-build Skript baut dann den Gerätebaum gemäß der HDF und der Treiberkonfiguration des Kernels auf, so dass der Treiber für den mcp251xfd CAN-Controller die Informationen über die Hardware am entsprechenden Knoten im Gerätebaum finden und die Hardware physisch lokalisieren kann.\\
+Das \textbf{petalinux-build} erstellt auch das Root-Dateisystem für die PetaLinux-Distribution entsprechend der Kernelkonfiguration und der Metadaten in den erstellten Schicht.\\
+Schließlich sollten nur noch die Boot Daten mit dem unten stehenden Befehl generiert werden.
+\begin{lstlisting}[language=bash]
+	$ petalinux-package --boot --fsbl images/linux/zynqmp_fsbl.elf --fpga ../bitstream/bd1_wrapper.bit --pmufw images/linux/pmufw.elf --u-boot --force
+\end{lstlisting}
+
+Sobald der Erstellungsprozess des PetaLinux-Projekts abgeschlossen ist, steht eine Reihe von bootfähigen Images zur Verfügung, die in der folgenden Tabelle beschrieben werden.\\
+
+
+\begin{tabular}{lp{11cm}}
+	\toprule
+	\textbf{Erzeugte Datei} &\textbf{Beschreibung}\\
+	\midrule
+	\textbf{BOOT.BIN } & Diese Datei ist eine Sammlung von mehrere Images(Boot-Header, Partition-Header, und Image-Header).\\
+	\textbf{system.bit} & Dies ist die Bitstream Datei. Sie enthält die Informationen, die für das FPGA notwendig sind, um die programmierbare Logik gemäß ihrer Konzeption zu konfigurieren. \\
+	\textbf{pmufw.elf} & Dies ist die PMU-Firmware wie im Abschnitt ~\ref{cha:tech_grund:sec:Komponente_eines_Emb_Lin_Sys:sub:sec:pmu} beschrieben, läuft auf der PMU und wird nach dem Ausführen des PMU Boot-ROM geladen. \\
+	\textbf{zynqmp_fsbl.elf} & Der FSBL ist der erste Bootloader, der auf der APU läuft. nähere Informationen findet man im Abschnitt ~\ref{cha:tech_grund:sec:Komponente_eines_Emb_Lin_Sys:sub:sec:fsbl} \\
+	\textbf{u-boot.elf} & U-Boot ist die zweite Stufe des Bootloaders.Und wird im Paragraf ~\ref{cha:tech_grund:sec:Komponente_eines_Emb_Lin_Sys:sub:sec:fsbl} beschrieben \\
+	\textbf{system.dtb} & Das ist die kompilierte Version des Gerätebaums(Device-tree). \\ 
+	\textbf{Image} & Dies ist das generische binäre Linux-Kernel-Image. der zusammen mit dem DTB file können zur Ausführung des Linux-Betriebssystems verwendet werden.\\
+	\textbf{image.ub} & Es handelt sich um ein FIT-Image (Flattened Image Tree), das aus dem Kernel-Image und dem Gerätebaum in einem einzigen Image besteht und von U-Boot verwendet werden kann.\\
+	\textbf{bl31.elf } & Dad ist die ARM Trusted Firmware, die verwendet wird verwendet, um Übergänge zwischen der sicheren und der unsicheren Boot Modus zu behandeln. \\
+	\bottomrule
+\end{tabular}
+
+Nach Abschluss alle diese Schritte haben wir nun alle notwendigen Elemente, um diese auf eine SD-Karte zu laden. In Dem nächsten Schritt wird die SD-Karte so formatiert werden, dass sie für das eingebettete Linux-Betriebssystem geeignet ist.
+Hierfür sollten 2 Partitionen auf der SD-Karte erstellt und formatiert werden. So dass die erste die Boot-Partition und die zweite die Root-Partition ist. 
+
+\begin{figure}[H]
+	\begin{center}		\includegraphics[width=0.8\textwidth]{./images/sd-karte_format.jpg}
+	\end{center}
+	\vspace{-5pt}
+	\caption[Formatierung der SD-Karte Partitionen]{Formatierung der SD-Karte Partitionen} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
+	\label{fig:sd_karte:formatieerung}
+	\vspace{-5pt}
+\end{figure}
+
+Nach diesem Schritt können die generierte Dateien auf die SD-Karte geschrieben werden. \\
+Die Dateien BOOT.BIN boot.scr und image.ub sollten aus <plnx-proj-root>/pre built/linux/images/ in der Boot-Partition, die in FAT32-Format formatiert wurede, kopiert werden. der folgende Befehl wurde vom Petalinux Projekt angegeben.
+
+\begin{lstlisting}[language=bash]
+	$ sudo cp -v BOOT.BIN boot.scr image.iu /media/landry/0F4B-72BB
+\end{lstlisting}
+
+Um das Root-Dateisystem auf die Root-Partition zu schreiben, wurde den folgenden Befehl eingegeben.
+\begin{lstlisting}[language=bash]
+ 	$ sudo tar xvf ./images/linux/rootfs.tar.gz -C /media/landry/f3db00f3-279c-4142-92c2-29ad46f0cc6d
+\end{lstlisting}
+
+\subsection{Booten des eingebetteten Linux-Images und Test des MCP251xfd CAN-Controller}
+Damit ich die Möglichkeit habe, den Bootvorgang zu debuggen und eventuelle Fehlermeldungen herauszufinden, habe ich beschlossen, die Hardware-Plattform im JTAG-Modus zu booten. Der JTAG-Boot kommuniziert mit dem Xilinx ilinx System Debugger(XSDB), das wiederum mit dem hw_server über den TCP-Port 3121 kommuniziert. ein Tool command language (TCL) Script wird über das \textbf{petalinux-boot} Kommando ausgeführt, um die Zynqmp Plattform über JTAG zu starten. Das Skript sendet Befehle und Binärdateien über das Netzwerk an dem Remote-Hardware-Server, die die Boot Schritte repräsentieren.
+der Terminal Emulator Programm Picocom wird hier verwendet, um die Bootmeldungen anzuzeigen. \\
+Die folgenden schritte wurden durchgeführt, um Linux zu booten. 
+\begin{itemize}
+	\item Mit Hilfe einer JTAG Kabel, ist der JTAG Anschluss des Boards mit dem Hostrechner zu verbinden
+	\item das gleiche gilt auch mit der serielle Schnittstelle 
+	\item Der Modus-Schalter der Plattform sollte auf den JTAG-Modus umgestellt werden, indem die 4 Schalter auf \textbf{ON} geschaltet werden.
+	\item Die Baudrate zur Kommunikation mit Picocom sollte eingestellt werden. 
+	\begin{lstlisting}[language=bash]
+		$ sudo picocom /dev/ttyUSB0 -b 115200
+	\end{lstlisting}
+	\item Erstellung einer Verbindung zu einem entfernten GDB-Server mit Hilfe des XSDBs
+	\item Mit dem folgenden Befehl lässt sich Linux Booten.
+	\begin{lstlisting}[language=bash]
+	petalinux-boot --jtag --fpga --bitstream images/linux/system.bit --kernel
+	\end{lstlisting}
+\end{itemize}
+
+Nachdem das Betriebssystem vollständig gebootet hat, kann man den Treiber mit den folgenden Befehlen entladen bzw. laden und überprüfen, ob der Treiber die Hardware korrekt initialisiert hat.  
+\begin{lstlisting}[language=bash]
+	$ rmmod mcp251xfd
+	$ modprobe mcp251xfd
+\end{lstlisting}
+Abbildung ~\ref{fig:treiber:ladung} zeigt die Ausgabe des \textbf{modprobe} Kommandos aus. Da kann sehen dass die Hardware mit den richtigen Taktfrequenz initialisiert wurde. 
+\begin{figure}[H]
+	\begin{center}		\includegraphics[width=1\textwidth]{./images/mcp_treiber_initialisietung.jpg}
+	\end{center}
+	\vspace{-5pt}
+	\caption[Laden des mcp251xfd Treibers]{Laden des mcp251xfd Treibers} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
+	\label{fig:treiber:ladung}
+	\vspace{-5pt}
+\end{figure}
+
+Ab jetzt kann die CAN Schnittstelle konfiguriert und getestet werden. Die wichtigsten Konfigurationen sind hier die Bit- und Datenrate, die über den IP-Kommando eingestellt werden können. Außerdem muss die Schnittstelle mit dem Befehl \textbf{UP} in Betrieb genommen werden. Das Bild ~\ref{fig:can:inbetriebnahme} zeigt das Ergebnis der Ausführung aller diese Befehle an. 
+
+\begin{figure}[H]
+	\begin{center}		\includegraphics[width=1\textwidth]{./images/can_bitrate.jpg}
+	\end{center}
+	\vspace{-5pt}
+	\caption[Inbetriebnahme des CAN-Mikrochips]{Inbetriebnahme des CAN-Mikrochips} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
+	\label{fig:can:inbetriebnahme}
+	\vspace{-5pt}
+\end{figure}
+
+Um den CAN-Controller zu testen, wurde ein Host-Computer an einen CAN-Knoten angeschlossen. Der Computer sollte dann unter der Kontrolle des CAN-Controllers 64-Bit-Daten über den CAN-Bus an den Linux-Kernel senden. Dabei stehen die ersten 21 Bits für die Prüfsumme und die restlichen Bits für die gesendeten Daten. Diese Daten werden dann auf dem Linux-Terminal mit dem folgenden Linux Befehl angezeigt. 
+
+\begin{lstlisting}[language=bash]
+	$ candum can1
+\end{lstlisting}
+
+Folgenden Daten wurden an dem Linux Kernel gesendet. 
+
+\begin{figure}[H]
+	\begin{center}		\includegraphics[width=1\textwidth]{./images/can_daten.jpg}
+	\end{center}
+	\vspace{-5pt}
+	\caption[Gesendete CAN-Nachrichten]{Gesendete CAN-Nachrichten} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
+	\label{fig:gesendete:can:nachrichten}
+	\vspace{-5pt}
+\end{figure}
+
+die folgenden CAN-Nachrichten wurden dann auf der Konsole empfangen. 
+
+\begin{figure}[H]
+	\begin{center}		\includegraphics[width=1\textwidth]{./images/can_bootschaften.jpg}
+	\end{center}
+	\vspace{-5pt}
+	\caption[Empfangene CAN-Nachrichten]{Empfangene CAN-Nachrichten} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
+	\label{fig:empfangene:can:nachrichten}
+	\vspace{-5pt}
+\end{figure}
+Bis zu einer Buslast von etwa 70\% konnten Daten gesendet und empfangen werden, was ein hervorragendes Ergebnis ist. Im Normalbetrieb liegt die Buslast in der Regel bei etwa 25\%. 
+
+In Abbildung ~\ref{fig:can:statistiken} ist die Statistik des Tests zu sehen
+\begin{figure}[H]
+	\begin{center}		\includegraphics[width=1\textwidth]{./images/can_statistik.jpg}
+	\end{center}
+	\vspace{-5pt}
+	\caption[Test Statistiken]{Test Statistiken} % Eckige Klammer (optional): Caption-Text in Abbildungsverzeichnis
+	\label{fig:can:statistiken}
+	\vspace{-5pt}
+\end{figure}

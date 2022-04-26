@@ -21,3 +21,4 @@
 \nomenclatureentry{aPLL@[{PLL}]\begingroup Phase Locked Loops\nomeqref {0.0}|nompageref}{V}
 \nomenclatureentry{aDRAM@[{DRAM}]\begingroup Dynamic Random Access Memory\nomeqref {0.0}|nompageref}{V}
 \nomenclatureentry{aATF@[{ATF}]\begingroup ARM Trusted Firmware\nomeqref {0.0}|nompageref}{V}
+\nomenclatureentry{aXSDB@[{XSDB}]\begingroup Xilinx System Debugger\nomeqref {0.0}|nompageref}{V}

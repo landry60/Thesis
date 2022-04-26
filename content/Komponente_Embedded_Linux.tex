@@ -67,7 +67,7 @@ Der Bootvorgang von Linux auf dem Xilinx Zynq UltraScale+MPSoC lässt sich in vi
 \end{itemize}
 
 \subsubsection{Die Boot-Setup-Phase}
-
+\label{cha:tech_grund:sec:Komponente_eines_Emb_Lin_Sys:sub:sec:pmu}
 Die Platform Management Unit (PMU) und die Configuration Security Unit (CSU) sind für das Einrichten des Zynq UltraScale+ MPSoC verantwortlich, bevor Linux auf dem PS gebootet werden kann . Die Boot-Setup-Phase besteht aus drei Phasen, die wie folgt unterteilt werden können[\cite{XilinxInc.2019}[p.~27]]:
 \begin{itemize}
 	\item \textbf{Pre-configuration stage (Oder Vor-Konfigurationsphase)}: Dieser Phase wird von der PMU angesteuert, die den PMU-ROM-Code(PBR). Nachdem der PBR-Code ausgeführt wurde, übergibt er die Systemkontrolle an die Configuration Security Unit (CSU). Die wichtigsten Schritte der Vor-Konfigurationsphase sind im Folgenden aufgeführt[\cite{XilinxInc.2019}[p.~57]]:
@@ -83,6 +83,7 @@ Die Platform Management Unit (PMU) und die Configuration Security Unit (CSU) sin
 \end{itemize}
 
 \subsubsection{Die Bootloader-Phase}
+\label{cha:tech_grund:sec:Komponente_eines_Emb_Lin_Sys:sub:sec:fsbl}
 \textbf{\normalsize First Stage Bootloader (FSBL)}\\
 Die FSBL ist der sekundäre Programmlader in der Terminologie des generischen ARM-Prozessor-Boot-Prozesses. Der FSBL führt die folgenden Aufgaben aus. FSBL führt die folgenden Aufgaben aus[\cite{XilinxInc.2019}]
 \begin{itemize}
@@ -112,11 +113,10 @@ Die Abbildung ~\ref{fig:boot:process} Es zeigt die Rolle der verschiedenen Einhe
 
 Der Zynq UltraScale+ MPSoC kann in zwei Modi gebootet werden: im sicheren und im unsicheren Modus. Diese werden im Folgenden beschrieben[\cite{XilinxInc.2019}[p.~58]]
 
-\textbf{\normalsize Nicht gesicherter Bootvorgang}\\
+\textbf{\normalsize \textit{Nicht gesicherter Bootvorgang}}\\
 In diesem Boot-Modus gibt die PMU die CSU frei und wechselt in den Servicemodus, in dem sie die Plattform überwacht. Die CSU lädt die FSBL in den On-Chip-Speicher (OCM) der APU und die PMUFW in das RAM der PMU. Die PMUFW wird parallel zur Ausführung der FSBL ausgeführt und läuft, bis Linux auf dem Zynq UltraScale+ MPSoC gebootet ist. Der FSBL initialisiert die Peripheriegeräte, E/A-Geräte, den Speicher und die Takte und übergibt sie an den ATF, der sie dann an das U-Boot weitergibt. Das U-Boot lädt dann den Linux-Kernel in das APU-Prozessor-Memo
 
-\textbf{Sicherer Bootvorgang}\\
-
+\textbf{\normalsize \textit{gesicherter Bootvorgang}}\\
 Der sichere Bootvorgang unterscheidet sich vom unsicheren Bootvorgang nur durch einige zusätzliche Authentifizierungs- und Entschlüsselungsschritte, die von der CSU ausgeführt werden. Beim sicheren Bootvorgang gibt die PMU den Reset der Configuration Security Unit (CSU) frei und geht in den PMU-Servermodus über, in dem sie die Stromversorgung überwacht. Nachdem die PMU das Zurücksetzen der CSU aufgehoben hat, prüft die CSU, ob eine Authentifizierung durch die FSBL oder die Benutzeranwendung erforderlich ist 
 
 \subsection{Die Kernel-Boot-Phase}
